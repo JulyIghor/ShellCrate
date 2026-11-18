@@ -1,0 +1,20 @@
+ShellCrate modification to Midnight Commander 4.8.33
+Modified November 15, 2026
+
+Use the existing MC_DATADIR environment variable for shared resources as well
+as configuration. ShellCrate sets it to this invocation's signed worker bundle.
+This lets F1 help, hints, skins, and editor syntax work after installation or
+relocation without copying bundled data into HOME. The upstream default remains
+unchanged when MC_DATADIR is absent. No execution or permission logic changes.
+
+--- a/src/main.c
++++ b/src/main.c
+@@ -145,7 +145,7 @@
+     else
+         mc_global.sysconfig_dir = g_strdup (SYSCONFDIR);
+ 
+-    mc_global.share_data_dir = g_strdup (DATADIR);
++    mc_global.share_data_dir = g_strdup (datadir_env != NULL ? datadir_env : DATADIR);
+ }
+ 
+ /* --------------------------------------------------------------------------------------------- */

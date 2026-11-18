@@ -1,0 +1,28 @@
+ShellCrate modification to Midnight Commander 4.8.33
+Modified November 18, 2026
+
+Resolve the user's SFTP configuration and identity paths under the HOME
+selected for this tool, alongside the known_hosts file.
+
+--- a/src/vfs/sftpfs/config_parser.c
++++ b/src/vfs/sftpfs/config_parser.c
+@@ -31,6 +31,7 @@
+ 
+ #include "lib/global.h"
+ 
++#include "lib/mcconfig.h"
+ #include "lib/search.h"
+ #include "lib/util.h"           /* tilde_expand() */
+ #include "lib/vfs/utilvfs.h"
+@@ -124,7 +125,10 @@
+     vfs_path_t *vpath;
+     char *fn;
+ 
+-    fn = tilde_expand (filename);
++    if (g_str_has_prefix (filename, "~/"))
++        fn = g_build_filename (mc_config_get_home_dir (), filename + 2, (char *) NULL);
++    else
++        fn = tilde_expand (filename);
+     vpath = vfs_path_from_str (fn);
+     g_free (fn);
+     return vfs_path_free (vpath, FALSE);

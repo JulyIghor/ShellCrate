@@ -1,0 +1,4085 @@
+{
+  "schemaVersion": 1,
+  "architecture": "arm64",
+  "minimumMacOS": "15.4.1",
+  "bottleTag": "arm64_sequoia",
+  "packages": [
+    {
+      "id": "rg",
+      "formula": "ripgrep",
+      "binary": "bin/rg",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "launchPolicy": "rg",
+      "name": "ripgrep",
+      "summary": "Search text with regular expressions across your approved folders.",
+      "restrictions": "Offline only. Use -z or --search-zip to search supported compressed files. Custom preprocessors and hostname programs are disabled."
+    },
+    {
+      "id": "fd",
+      "formula": "fd",
+      "binary": "bin/fd",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "launchPolicy": "fd",
+      "name": "fd",
+      "summary": "Find files and folders with concise patterns and useful defaults.",
+      "restrictions": "Offline only. Use -l or --list-details for a detailed listing. Custom commands selected with -x or -X are disabled."
+    },
+    {
+      "id": "jq",
+      "formula": "jq",
+      "binary": "bin/jq",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "launchPolicy": "jq",
+      "name": "jq",
+      "summary": "Filter, transform, and format JSON from files or piped input.",
+      "restrictions": "Offline only. File inputs and module reads require folder access. Use the explicit stdin-only launcher mode for pipelines without an approved working directory."
+    },
+    {
+      "id": "7zz",
+      "formula": "sevenzip",
+      "binary": "bin/7zz",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "launchPolicy": "7zz",
+      "name": "7-Zip",
+      "summary": "Create, inspect, test, and extract archives in your approved folders.",
+      "restrictions": "Offline only. Archive inputs and outputs require folder access. Use 7zz in place of 7z in upstream examples. Playground commands have the usual time and output limits.",
+      "manualArchive": {
+        "url": "https://github.com/ip7z/7zip/releases/download/26.06/7z2606-mac.tar.xz",
+        "sha256": "b6f17920b4240940461dac8ef4009891881ac44d2a5ead625ede2ec8472185dd",
+        "version": "26.06"
+      }
+    },
+    {
+      "id": "curl",
+      "formula": "curl",
+      "binary": "bin/curl",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker",
+        "IncomingWorker",
+        "BidirectionalWorker"
+      ],
+      "launchPolicy": "curl",
+      "name": "curl",
+      "summary": "Transfer data with URLs, inspect HTTP responses, and test APIs.",
+      "restrictions": "Choose Outgoing Only for HTTP, HTTPS, SFTP, SCP, and passive FTP. This build includes HTTP/2 and HTTP/3. Active FTP also needs incoming access."
+    },
+    {
+      "id": "wget",
+      "formula": "wget",
+      "binary": "bin/wget",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker",
+        "IncomingWorker",
+        "BidirectionalWorker"
+      ],
+      "launchPolicy": "wget",
+      "name": "GNU Wget",
+      "summary": "Download files and mirror websites from your terminal.",
+      "restrictions": "Networking starts Offline. Outgoing Only supports HTTP, HTTPS, and passive FTP. Active FTP also requires Incoming access. Configuration files, command-style settings, background mode, and external password helpers are disabled."
+    },
+    {
+      "id": "rsync",
+      "formula": "rsync",
+      "binary": "bin/rsync",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker"
+      ],
+      "launchPolicy": "rsync",
+      "name": "rsync",
+      "summary": "Synchronize files locally, over SSH, or with an rsync daemon.",
+      "restrictions": "Select Outgoing Only for SSH (user@host:path) or direct daemon connections. SSH uses the folder .ssh in rsync's HOME, or your account's .ssh folder when you explicitly grant it to rsync. Use a trusted known_hosts entry and a key that works without a prompt. Download into an approved writable directory by changing into it and using . as the destination. Custom transport commands and serving mode are disabled.",
+      "extraNotices": [
+        "zlib/README",
+        "lib/mdfour.c",
+        "lib/md5.c"
+      ]
+    },
+    {
+      "id": "rsync-ssh",
+      "formula": "openssh",
+      "binary": "bin/ssh",
+      "transportFor": [
+        "rsync",
+        "restic",
+        "git-client"
+      ],
+      "name": "OpenSSH",
+      "xpcServices": [
+        "OutgoingWorker"
+      ]
+    },
+    {
+      "id": "mc",
+      "formula": "midnight-commander",
+      "binary": "libexec/bin/mc",
+      "sourceBuild": true,
+      "reason": "Keep bundled help, skins and syntax relocatable without changing the process sandbox.",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker",
+        "IncomingWorker",
+        "BidirectionalWorker"
+      ],
+      "launchPolicy": "mc",
+      "name": "Midnight Commander",
+      "summary": "Browse, copy, move, and edit files in a two-panel terminal file manager.",
+      "restrictions": "Use Terminal for file panels, SFTP, and FTP. SFTP and passive FTP need outgoing access. Active FTP also needs incoming access. For key authentication, set IdentityFile in .ssh/config under MC's HOME and keep known_hosts there. Shell commands and background jobs are disabled. Playground supports help and version commands."
+    },
+    {
+      "id": "bash",
+      "formula": "bash",
+      "binary": "bin/bash",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker",
+        "IncomingWorker",
+        "BidirectionalWorker"
+      ],
+      "launchPolicy": "bash",
+      "name": "GNU Bash",
+      "summary": "Run shell scripts, pipelines, and interactive commands within your approved folders.",
+      "restrictions": "Direct child processes inherit this invocation's sandbox. Managed ShellCrate commands use the selected call mode, defaulting to inherited folders, HOME, and supported network access. Target permissions can be chosen explicitly in Permissions. System commands are also available through PATH. Interactive use requires sourced terminal setup. Dynamic native modules are not included. Detached background services are unsupported."
+    },
+    {
+      "id": "zsh",
+      "formula": "zsh",
+      "binary": "bin/zsh",
+      "sourceBuild": true,
+      "reason": "Link shell modules into the executable so interactive editing and completion work without Homebrew's fixed module path.",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker",
+        "IncomingWorker",
+        "BidirectionalWorker"
+      ],
+      "launchPolicy": "zsh",
+      "name": "Zsh",
+      "summary": "Run shell scripts, pipelines, and interactive commands within your approved folders.",
+      "restrictions": "Direct child processes inherit this invocation's sandbox. Managed ShellCrate commands use the selected call mode, defaulting to inherited folders, HOME, and supported network access. Target permissions can be chosen explicitly in Permissions. System commands are also available through PATH. Interactive use requires sourced terminal setup. Dynamic native modules are not included. Detached background services are unsupported."
+    },
+    {
+      "id": "awk",
+      "formula": "gawk",
+      "binary": "bin/gawk",
+      "command": "awk",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker",
+        "IncomingWorker",
+        "BidirectionalWorker"
+      ],
+      "name": "awk",
+      "variant": "GNU Awk",
+      "summary": "Process structured text using patterns and actions.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew GNU Awk. Folder access and networking follow this tool's Permissions. Its built-in TCP client binds a local socket first, so it requires Outgoing + Incoming even for outgoing requests. Other profiles remain available for text processing and child commands. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "base64",
+      "formula": "coreutils",
+      "binary": "bin/gbase64",
+      "command": "base64",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "base64",
+      "variant": "GNU coreutils",
+      "summary": "Encode and decode Base64 data.",
+      "category": "Data & Formats",
+      "symbol": "curlybraces",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "basename",
+      "formula": "coreutils",
+      "binary": "bin/gbasename",
+      "command": "basename",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "basename",
+      "variant": "GNU coreutils",
+      "summary": "Extract the final component of a path.",
+      "category": "Files & Folders",
+      "symbol": "folder",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "bc",
+      "formula": "bc",
+      "binary": "bin/bc",
+      "command": "bc",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "bc",
+      "variant": "GNU bc",
+      "summary": "Calculate with arbitrary precision numbers.",
+      "category": "Utilities",
+      "symbol": "wrench.and.screwdriver",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "bzcat",
+      "formula": "bzip2",
+      "binary": "bin/bzcat",
+      "command": "bzcat",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "bzcat",
+      "variant": "bzip2",
+      "summary": "Read compressed bzip2 files.",
+      "category": "Archives & Compression",
+      "symbol": "archivebox",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version.",
+      "manuals": {
+        "root": "bottle",
+        "paths": [
+          "share/man/man1/bzip2.1"
+        ]
+      }
+    },
+    {
+      "id": "bzip2",
+      "formula": "bzip2",
+      "binary": "bin/bzip2",
+      "command": "bzip2",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "bzip2",
+      "variant": "bzip2",
+      "summary": "Compress and decompress bzip2 files.",
+      "category": "Archives & Compression",
+      "symbol": "archivebox",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version.",
+      "manuals": {
+        "root": "bottle",
+        "paths": [
+          "share/man/man1/bzip2.1"
+        ]
+      }
+    },
+    {
+      "id": "bzip2recover",
+      "formula": "bzip2",
+      "binary": "bin/bzip2recover",
+      "command": "bzip2recover",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "bzip2recover",
+      "variant": "bzip2",
+      "summary": "Recover blocks from damaged bzip2 archives.",
+      "category": "Archives & Compression",
+      "symbol": "archivebox",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version.",
+      "manuals": {
+        "root": "bottle",
+        "paths": [
+          "share/man/man1/bzip2.1"
+        ]
+      }
+    },
+    {
+      "id": "cat",
+      "formula": "coreutils",
+      "binary": "bin/gcat",
+      "command": "cat",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "cat",
+      "variant": "GNU coreutils",
+      "summary": "Read and concatenate files.",
+      "category": "Files & Folders",
+      "symbol": "folder",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "chmod",
+      "formula": "coreutils",
+      "binary": "bin/gchmod",
+      "command": "chmod",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "chmod",
+      "variant": "GNU coreutils",
+      "summary": "Change permissions on accessible files.",
+      "category": "Files & Folders",
+      "symbol": "folder",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "cksum",
+      "formula": "coreutils",
+      "binary": "bin/gcksum",
+      "command": "cksum",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "cksum",
+      "variant": "GNU coreutils",
+      "summary": "Calculate file checksums.",
+      "category": "Data & Formats",
+      "symbol": "curlybraces",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "cmp",
+      "formula": "diffutils",
+      "binary": "bin/cmp",
+      "command": "cmp",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "cmp",
+      "variant": "GNU diffutils",
+      "summary": "Compare two files byte by byte.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "column",
+      "formula": "util-linux",
+      "binary": "bin/column",
+      "command": "column",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "column",
+      "variant": "util-linux",
+      "summary": "Arrange text into columns.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "comm",
+      "formula": "coreutils",
+      "binary": "bin/gcomm",
+      "command": "comm",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "comm",
+      "variant": "GNU coreutils",
+      "summary": "Compare sorted text files.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "compress",
+      "formula": "ncompress",
+      "binary": "bin/compress",
+      "command": "compress",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "compress",
+      "variant": "ncompress",
+      "summary": "Compress files in Unix compress format.",
+      "category": "Archives & Compression",
+      "symbol": "archivebox",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "cp",
+      "formula": "coreutils",
+      "binary": "bin/gcp",
+      "command": "cp",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "cp",
+      "variant": "GNU coreutils",
+      "summary": "Copy files and directories.",
+      "category": "Files & Folders",
+      "symbol": "folder",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "cut",
+      "formula": "coreutils",
+      "binary": "bin/gcut",
+      "command": "cut",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "cut",
+      "variant": "GNU coreutils",
+      "summary": "Extract fields or columns from lines.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "date",
+      "formula": "coreutils",
+      "binary": "bin/gdate",
+      "command": "date",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "date",
+      "variant": "GNU coreutils",
+      "summary": "Display or format dates and times.",
+      "category": "Utilities",
+      "symbol": "wrench.and.screwdriver",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "df",
+      "formula": "coreutils",
+      "binary": "bin/gdf",
+      "command": "df",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "df",
+      "variant": "GNU coreutils",
+      "summary": "Report filesystem space.",
+      "category": "Files & Folders",
+      "symbol": "folder",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "diff",
+      "formula": "diffutils",
+      "binary": "bin/diff",
+      "command": "diff",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "diff",
+      "variant": "GNU diffutils",
+      "summary": "Compare text files and directories.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "diff3",
+      "formula": "diffutils",
+      "binary": "bin/diff3",
+      "command": "diff3",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "diff3",
+      "variant": "GNU diffutils",
+      "summary": "Compare three text files.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "dirname",
+      "formula": "coreutils",
+      "binary": "bin/gdirname",
+      "command": "dirname",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "dirname",
+      "variant": "GNU coreutils",
+      "summary": "Extract the directory part of a path.",
+      "category": "Files & Folders",
+      "symbol": "folder",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "du",
+      "formula": "coreutils",
+      "binary": "bin/gdu",
+      "command": "du",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "du",
+      "variant": "GNU coreutils",
+      "summary": "Measure file and directory sizes.",
+      "category": "Files & Folders",
+      "symbol": "folder",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "echo",
+      "formula": "coreutils",
+      "binary": "bin/gecho",
+      "command": "echo",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "echo",
+      "variant": "GNU coreutils",
+      "summary": "Print arguments as a line of text.",
+      "category": "Utilities",
+      "symbol": "wrench.and.screwdriver",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "env",
+      "formula": "coreutils",
+      "binary": "bin/genv",
+      "command": "env",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker",
+        "IncomingWorker",
+        "BidirectionalWorker"
+      ],
+      "name": "env",
+      "variant": "GNU coreutils",
+      "summary": "Inspect the environment or run another program.",
+      "category": "Utilities",
+      "symbol": "wrench.and.screwdriver",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "expand",
+      "formula": "coreutils",
+      "binary": "bin/gexpand",
+      "command": "expand",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "expand",
+      "variant": "GNU coreutils",
+      "summary": "Convert tabs into spaces.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "expr",
+      "formula": "coreutils",
+      "binary": "bin/gexpr",
+      "command": "expr",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "expr",
+      "variant": "GNU coreutils",
+      "summary": "Evaluate simple expressions.",
+      "category": "Utilities",
+      "symbol": "wrench.and.screwdriver",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "false",
+      "formula": "coreutils",
+      "binary": "bin/gfalse",
+      "command": "false",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "false",
+      "variant": "GNU coreutils",
+      "summary": "Return an unsuccessful exit status.",
+      "category": "Utilities",
+      "symbol": "wrench.and.screwdriver",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "file",
+      "formula": "file-formula",
+      "binary": "bin/file",
+      "command": "file",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "file",
+      "variant": "file",
+      "summary": "Identify file formats.",
+      "category": "Files & Folders",
+      "symbol": "folder",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "find",
+      "formula": "findutils",
+      "binary": "bin/gfind",
+      "command": "find",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker",
+        "IncomingWorker",
+        "BidirectionalWorker"
+      ],
+      "name": "find",
+      "variant": "GNU findutils",
+      "summary": "Find files and run actions on matching paths.",
+      "category": "Files & Folders",
+      "symbol": "folder",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "fmt",
+      "formula": "coreutils",
+      "binary": "bin/gfmt",
+      "command": "fmt",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "fmt",
+      "variant": "GNU coreutils",
+      "summary": "Reformat paragraphs.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "fold",
+      "formula": "coreutils",
+      "binary": "bin/gfold",
+      "command": "fold",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "fold",
+      "variant": "GNU coreutils",
+      "summary": "Wrap long lines.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "grep",
+      "formula": "grep",
+      "binary": "bin/ggrep",
+      "command": "grep",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "grep",
+      "variant": "GNU grep",
+      "summary": "Search text with regular expressions.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "gunzip",
+      "formula": "gzip",
+      "binary": "bin/gzip",
+      "command": "gunzip",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "gunzip",
+      "variant": "GNU gzip",
+      "summary": "Decompress gzip files.",
+      "category": "Archives & Compression",
+      "symbol": "archivebox",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version.",
+      "argumentPrefix": [
+        "--decompress"
+      ]
+    },
+    {
+      "id": "gzcat",
+      "formula": "gzip",
+      "binary": "bin/gzip",
+      "command": "gzcat",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "gzcat",
+      "variant": "GNU gzip",
+      "summary": "Read compressed gzip files.",
+      "category": "Archives & Compression",
+      "symbol": "archivebox",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version.",
+      "argumentPrefix": [
+        "--decompress",
+        "--stdout"
+      ]
+    },
+    {
+      "id": "gzip",
+      "formula": "gzip",
+      "binary": "bin/gzip",
+      "command": "gzip",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "gzip",
+      "variant": "GNU gzip",
+      "summary": "Compress and decompress gzip files.",
+      "category": "Archives & Compression",
+      "symbol": "archivebox",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "head",
+      "formula": "coreutils",
+      "binary": "bin/ghead",
+      "command": "head",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "head",
+      "variant": "GNU coreutils",
+      "summary": "Read the beginning of a file.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "hexdump",
+      "formula": "util-linux",
+      "binary": "bin/hexdump",
+      "command": "hexdump",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "hexdump",
+      "variant": "util-linux",
+      "summary": "Inspect data as hexadecimal bytes.",
+      "category": "Data & Formats",
+      "symbol": "curlybraces",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "iconv",
+      "formula": "libiconv",
+      "binary": "bin/iconv",
+      "command": "iconv",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "iconv",
+      "variant": "GNU libiconv",
+      "summary": "Convert text between character encodings.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "join",
+      "formula": "coreutils",
+      "binary": "bin/gjoin",
+      "command": "join",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "join",
+      "variant": "GNU coreutils",
+      "summary": "Join sorted files on a common field.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "ln",
+      "formula": "coreutils",
+      "binary": "bin/gln",
+      "command": "ln",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "ln",
+      "variant": "GNU coreutils",
+      "summary": "Create file links.",
+      "category": "Files & Folders",
+      "symbol": "folder",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "ls",
+      "formula": "coreutils",
+      "binary": "bin/gls",
+      "command": "ls",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "ls",
+      "variant": "GNU coreutils",
+      "summary": "List directory contents.",
+      "category": "Files & Folders",
+      "symbol": "folder",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "mandoc",
+      "formula": "mandoc",
+      "binary": "bin/mandoc",
+      "command": "mandoc",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "mandoc",
+      "variant": "mandoc",
+      "summary": "Render Unix manual pages.",
+      "category": "Utilities",
+      "symbol": "wrench.and.screwdriver",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "mkdir",
+      "formula": "coreutils",
+      "binary": "bin/gmkdir",
+      "command": "mkdir",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "mkdir",
+      "variant": "GNU coreutils",
+      "summary": "Create directories.",
+      "category": "Files & Folders",
+      "symbol": "folder",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "mktemp",
+      "formula": "coreutils",
+      "binary": "bin/gmktemp",
+      "command": "mktemp",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "mktemp",
+      "variant": "GNU coreutils",
+      "summary": "Create temporary files and directories.",
+      "category": "Files & Folders",
+      "symbol": "folder",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "mv",
+      "formula": "coreutils",
+      "binary": "bin/gmv",
+      "command": "mv",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "mv",
+      "variant": "GNU coreutils",
+      "summary": "Move and rename files.",
+      "category": "Files & Folders",
+      "symbol": "folder",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "nl",
+      "formula": "coreutils",
+      "binary": "bin/gnl",
+      "command": "nl",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "nl",
+      "variant": "GNU coreutils",
+      "summary": "Number lines of text.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "od",
+      "formula": "coreutils",
+      "binary": "bin/god",
+      "command": "od",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "od",
+      "variant": "GNU coreutils",
+      "summary": "Display binary data in several formats.",
+      "category": "Data & Formats",
+      "symbol": "curlybraces",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "paste",
+      "formula": "coreutils",
+      "binary": "bin/gpaste",
+      "command": "paste",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "paste",
+      "variant": "GNU coreutils",
+      "summary": "Merge lines from multiple files.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "patch",
+      "formula": "gpatch",
+      "binary": "bin/gpatch",
+      "command": "patch",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "patch",
+      "variant": "GNU patch",
+      "summary": "Apply changes described by a diff.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "printf",
+      "formula": "coreutils",
+      "binary": "bin/gprintf",
+      "command": "printf",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "printf",
+      "variant": "GNU coreutils",
+      "summary": "Print formatted text.",
+      "category": "Utilities",
+      "symbol": "wrench.and.screwdriver",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "pwd",
+      "formula": "coreutils",
+      "binary": "bin/gpwd",
+      "command": "pwd",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "pwd",
+      "variant": "GNU coreutils",
+      "summary": "Print the current directory.",
+      "category": "Files & Folders",
+      "symbol": "folder",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "readlink",
+      "formula": "coreutils",
+      "binary": "bin/greadlink",
+      "command": "readlink",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "readlink",
+      "variant": "GNU coreutils",
+      "summary": "Read the target of a symbolic link.",
+      "category": "Files & Folders",
+      "symbol": "folder",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "rev",
+      "formula": "util-linux",
+      "binary": "bin/rev",
+      "command": "rev",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "rev",
+      "variant": "util-linux",
+      "summary": "Reverse the characters on each line.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "rm",
+      "formula": "coreutils",
+      "binary": "bin/grm",
+      "command": "rm",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "rm",
+      "variant": "GNU coreutils",
+      "summary": "Remove files and directories.",
+      "category": "Files & Folders",
+      "symbol": "folder",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "rmdir",
+      "formula": "coreutils",
+      "binary": "bin/grmdir",
+      "command": "rmdir",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "rmdir",
+      "variant": "GNU coreutils",
+      "summary": "Remove empty directories.",
+      "category": "Files & Folders",
+      "symbol": "folder",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "sdiff",
+      "formula": "diffutils",
+      "binary": "bin/sdiff",
+      "command": "sdiff",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "sdiff",
+      "variant": "GNU diffutils",
+      "summary": "Compare text files side by side.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "sed",
+      "formula": "gnu-sed",
+      "binary": "bin/gsed",
+      "command": "sed",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "sed",
+      "variant": "GNU sed",
+      "summary": "Transform text with a stream editor.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "seq",
+      "formula": "coreutils",
+      "binary": "bin/gseq",
+      "command": "seq",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "seq",
+      "variant": "GNU coreutils",
+      "summary": "Generate a sequence of numbers.",
+      "category": "Utilities",
+      "symbol": "wrench.and.screwdriver",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "sleep",
+      "formula": "coreutils",
+      "binary": "bin/gsleep",
+      "command": "sleep",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "sleep",
+      "variant": "GNU coreutils",
+      "summary": "Pause for a specified duration.",
+      "category": "Utilities",
+      "symbol": "wrench.and.screwdriver",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "sort",
+      "formula": "coreutils",
+      "binary": "bin/gsort",
+      "command": "sort",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "sort",
+      "variant": "GNU coreutils",
+      "summary": "Sort lines of text.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "split",
+      "formula": "coreutils",
+      "binary": "bin/gsplit",
+      "command": "split",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "split",
+      "variant": "GNU coreutils",
+      "summary": "Split a file into smaller pieces.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "stat",
+      "formula": "coreutils",
+      "binary": "bin/gstat",
+      "command": "stat",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "stat",
+      "variant": "GNU coreutils",
+      "summary": "Inspect file metadata.",
+      "category": "Files & Folders",
+      "symbol": "folder",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "tail",
+      "formula": "coreutils",
+      "binary": "bin/gtail",
+      "command": "tail",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "tail",
+      "variant": "GNU coreutils",
+      "summary": "Read or follow the end of a file.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "tar",
+      "formula": "gnu-tar",
+      "binary": "bin/gtar",
+      "command": "tar",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "tar",
+      "variant": "GNU tar",
+      "summary": "Create, inspect, and extract archives.",
+      "category": "Archives & Compression",
+      "symbol": "archivebox",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "tee",
+      "formula": "coreutils",
+      "binary": "bin/gtee",
+      "command": "tee",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "tee",
+      "variant": "GNU coreutils",
+      "summary": "Copy input to both a file and standard output.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "touch",
+      "formula": "coreutils",
+      "binary": "bin/gtouch",
+      "command": "touch",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "touch",
+      "variant": "GNU coreutils",
+      "summary": "Create files or update timestamps.",
+      "category": "Files & Folders",
+      "symbol": "folder",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "tr",
+      "formula": "coreutils",
+      "binary": "bin/gtr",
+      "command": "tr",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "tr",
+      "variant": "GNU coreutils",
+      "summary": "Translate or remove characters.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "true",
+      "formula": "coreutils",
+      "binary": "bin/gtrue",
+      "command": "true",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "true",
+      "variant": "GNU coreutils",
+      "summary": "Return a successful exit status.",
+      "category": "Utilities",
+      "symbol": "wrench.and.screwdriver",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "truncate",
+      "formula": "coreutils",
+      "binary": "bin/gtruncate",
+      "command": "truncate",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "truncate",
+      "variant": "GNU coreutils",
+      "summary": "Set the length of a file.",
+      "category": "Files & Folders",
+      "symbol": "folder",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "uname",
+      "formula": "coreutils",
+      "binary": "bin/guname",
+      "command": "uname",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "uname",
+      "variant": "GNU coreutils",
+      "summary": "Display operating system information.",
+      "category": "Utilities",
+      "symbol": "wrench.and.screwdriver",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "unexpand",
+      "formula": "coreutils",
+      "binary": "bin/gunexpand",
+      "command": "unexpand",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "unexpand",
+      "variant": "GNU coreutils",
+      "summary": "Convert spaces into tabs.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "uniq",
+      "formula": "coreutils",
+      "binary": "bin/guniq",
+      "command": "uniq",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "uniq",
+      "variant": "GNU coreutils",
+      "summary": "Filter repeated adjacent lines.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "unzip",
+      "formula": "unzip",
+      "binary": "bin/unzip",
+      "command": "unzip",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "unzip",
+      "variant": "Info-ZIP",
+      "summary": "Inspect and extract ZIP archives.",
+      "category": "Archives & Compression",
+      "symbol": "archivebox",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "uuidgen",
+      "formula": "util-linux",
+      "binary": "bin/uuidgen",
+      "command": "uuidgen",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "uuidgen",
+      "variant": "util-linux",
+      "summary": "Generate a UUID.",
+      "category": "Data & Formats",
+      "symbol": "curlybraces",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "wc",
+      "formula": "coreutils",
+      "binary": "bin/gwc",
+      "command": "wc",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "wc",
+      "variant": "GNU coreutils",
+      "summary": "Count lines, words, and bytes.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "which",
+      "formula": "gnu-which",
+      "binary": "bin/gwhich",
+      "command": "which",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "which",
+      "variant": "GNU which",
+      "summary": "Locate a command on the sandbox PATH.",
+      "category": "Utilities",
+      "symbol": "wrench.and.screwdriver",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "whoami",
+      "formula": "coreutils",
+      "binary": "bin/gwhoami",
+      "command": "whoami",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "whoami",
+      "variant": "GNU coreutils",
+      "summary": "Print the current user name.",
+      "category": "Utilities",
+      "symbol": "wrench.and.screwdriver",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "xargs",
+      "formula": "findutils",
+      "binary": "bin/gxargs",
+      "command": "xargs",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker",
+        "IncomingWorker",
+        "BidirectionalWorker"
+      ],
+      "name": "xargs",
+      "variant": "GNU findutils",
+      "summary": "Build and run commands from standard input.",
+      "category": "Text & Search",
+      "symbol": "text.magnifyingglass",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "xmllint",
+      "formula": "libxml2",
+      "binary": "bin/xmllint",
+      "command": "xmllint",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker"
+      ],
+      "name": "xmllint",
+      "variant": "libxml2",
+      "summary": "Validate and query XML documents.",
+      "category": "Data & Formats",
+      "symbol": "curlybraces",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "xsltproc",
+      "formula": "libxslt",
+      "binary": "bin/xsltproc",
+      "command": "xsltproc",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker"
+      ],
+      "name": "xsltproc",
+      "variant": "libxslt",
+      "summary": "Transform XML with XSLT.",
+      "category": "Data & Formats",
+      "symbol": "curlybraces",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "xxd",
+      "formula": "vim",
+      "binary": "bin/xxd",
+      "command": "xxd",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "xxd",
+      "variant": "Vim xxd",
+      "summary": "Create or reverse a hexadecimal dump.",
+      "category": "Data & Formats",
+      "symbol": "curlybraces",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "zip",
+      "formula": "zip",
+      "binary": "bin/zip",
+      "command": "zip",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "zip",
+      "variant": "Info-ZIP",
+      "summary": "Create and update ZIP archives.",
+      "category": "Archives & Compression",
+      "symbol": "archivebox",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "zipinfo",
+      "formula": "unzip",
+      "binary": "bin/zipinfo",
+      "command": "zipinfo",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "zipinfo",
+      "variant": "Info-ZIP",
+      "summary": "Inspect detailed ZIP archive metadata.",
+      "category": "Archives & Compression",
+      "symbol": "archivebox",
+      "restrictions": "Homebrew version. Folder access and networking follow this tool's Permissions. Child processes inherit its sandbox. Its options can differ from the macOS System version."
+    },
+    {
+      "id": "actionlint",
+      "formula": "actionlint",
+      "binary": "bin/actionlint",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "actionlint",
+      "category": "Developer Tools",
+      "summary": "Static checker for GitHub Actions workflow files",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "age",
+      "formula": "age",
+      "binary": "bin/age",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "age",
+      "category": "Utilities",
+      "summary": "Simple, modern, secure file encryption",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "age-keygen",
+      "formula": "age",
+      "binary": "bin/age-keygen",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "age-keygen",
+      "category": "Utilities",
+      "summary": "Simple, modern, secure file encryption",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "age-inspect",
+      "formula": "age",
+      "binary": "bin/age-inspect",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "age-inspect",
+      "category": "Utilities",
+      "summary": "Simple, modern, secure file encryption",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "ast-grep",
+      "formula": "ast-grep",
+      "binary": "bin/ast-grep",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "ast-grep",
+      "category": "Developer Tools",
+      "summary": "Code searching, linting, rewriting",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "astyle",
+      "formula": "astyle",
+      "binary": "bin/astyle",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "astyle",
+      "category": "Developer Tools",
+      "summary": "Source code beautifier for C, C++, C#, and Java",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "b3sum",
+      "formula": "b3sum",
+      "binary": "bin/b3sum",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "b3sum",
+      "category": "Utilities",
+      "summary": "Command-line implementation of the BLAKE3 cryptographic hash function",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "bat",
+      "formula": "bat",
+      "binary": "bin/bat",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "bat",
+      "category": "Text & Search",
+      "summary": "Clone of cat(1) with syntax highlighting and Git integration",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "biome",
+      "formula": "biome",
+      "binary": "bin/biome",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "biome",
+      "category": "Developer Tools",
+      "summary": "Toolchain of the web",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "brotli",
+      "formula": "brotli",
+      "binary": "bin/brotli",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "brotli",
+      "category": "Files & Folders",
+      "summary": "Generic-purpose lossless compression algorithm by Google",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "cabextract",
+      "formula": "cabextract",
+      "binary": "bin/cabextract",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "cabextract",
+      "category": "Files & Folders",
+      "summary": "Extract files from Microsoft cabinet files",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "cmark",
+      "formula": "cmark",
+      "binary": "bin/cmark",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "cmark",
+      "category": "Data & Formats",
+      "summary": "Strongly specified, highly compatible implementation of Markdown",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "cmark-gfm",
+      "formula": "cmark-gfm",
+      "binary": "bin/cmark-gfm",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "cmark-gfm",
+      "category": "Data & Formats",
+      "summary": "C implementation of GitHub Flavored Markdown",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "dasel",
+      "formula": "dasel",
+      "binary": "bin/dasel",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "dasel",
+      "category": "Data & Formats",
+      "summary": "JSON, YAML, TOML, XML, and CSV query and modification tool",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "difft",
+      "formula": "difftastic",
+      "binary": "bin/difft",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "difft",
+      "category": "Developer Tools",
+      "summary": "Diff that understands syntax",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "dos2unix",
+      "formula": "dos2unix",
+      "binary": "bin/dos2unix",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "dos2unix",
+      "category": "Text & Search",
+      "summary": "Convert text between DOS, UNIX, and Mac formats",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "mac2unix",
+      "formula": "dos2unix",
+      "binary": "bin/mac2unix",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "mac2unix",
+      "category": "Text & Search",
+      "summary": "Convert text between DOS, UNIX, and Mac formats",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "unix2dos",
+      "formula": "dos2unix",
+      "binary": "bin/unix2dos",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "unix2dos",
+      "category": "Text & Search",
+      "summary": "Convert text between DOS, UNIX, and Mac formats",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "unix2mac",
+      "formula": "dos2unix",
+      "binary": "bin/unix2mac",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "unix2mac",
+      "category": "Text & Search",
+      "summary": "Convert text between DOS, UNIX, and Mac formats",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "dua",
+      "formula": "dua-cli",
+      "binary": "bin/dua",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "dua",
+      "category": "Files & Folders",
+      "summary": "View disk space usage and delete unwanted data, fast",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode. Interactive use requires sourced terminal setup. Batch and stream modes remain available.",
+      "launchPolicy": "interactive"
+    },
+    {
+      "id": "duckdb",
+      "formula": "duckdb",
+      "binary": "bin/duckdb",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "duckdb",
+      "category": "Data & Formats",
+      "summary": "Embeddable SQL OLAP Database Management System",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "noticeSource": {
+        "url": "https://github.com/duckdb/duckdb/archive/d54cbbe3df17e8e5ce68312f483b4155836112aa.tar.gz",
+        "sha256": "93e3d1f9c84b6ec3493237d21565c01c2c19b9862e54e5552d3d7999ccc3bbb4",
+        "version": "2.0.0"
+      }
+    },
+    {
+      "id": "duckdb-cli",
+      "formula": "duckdb",
+      "binary": "bin/duckdb_cli",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "duckdb_cli",
+      "category": "Data & Formats",
+      "summary": "Embeddable SQL OLAP Database Management System",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "noticeSource": {
+        "url": "https://github.com/duckdb/duckdb/archive/d54cbbe3df17e8e5ce68312f483b4155836112aa.tar.gz",
+        "sha256": "93e3d1f9c84b6ec3493237d21565c01c2c19b9862e54e5552d3d7999ccc3bbb4",
+        "version": "2.0.0"
+      }
+    },
+    {
+      "id": "duf",
+      "formula": "duf",
+      "binary": "bin/duf",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "duf",
+      "category": "Files & Folders",
+      "summary": "Disk Usage/Free Utility - a better 'df' alternative",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "dust",
+      "formula": "dust",
+      "binary": "bin/dust",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "dust",
+      "category": "Files & Folders",
+      "summary": "More intuitive version of du in rust",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "eza",
+      "formula": "eza",
+      "binary": "bin/eza",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "eza",
+      "category": "Files & Folders",
+      "summary": "Modern, maintained replacement for ls",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "fclones",
+      "formula": "fclones",
+      "binary": "bin/fclones",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "fclones",
+      "category": "Files & Folders",
+      "summary": "Efficient Duplicate File Finder",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "fdupes",
+      "formula": "fdupes",
+      "binary": "bin/fdupes",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "fdupes",
+      "category": "Files & Folders",
+      "summary": "Identify or delete duplicate files",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "extraNotices": [
+        "README"
+      ]
+    },
+    {
+      "id": "ffmpeg",
+      "formula": "ffmpeg",
+      "binary": "bin/ffmpeg",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker",
+        "IncomingWorker",
+        "BidirectionalWorker"
+      ],
+      "name": "ffmpeg",
+      "category": "Documents & Media",
+      "summary": "Play, record, convert, and stream select audio and video codecs",
+      "restrictions": "Networking starts Offline. Select a supported network profile in Permissions. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "ffprobe",
+      "formula": "ffmpeg",
+      "binary": "bin/ffprobe",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker",
+        "IncomingWorker",
+        "BidirectionalWorker"
+      ],
+      "name": "ffprobe",
+      "category": "Documents & Media",
+      "summary": "Play, record, convert, and stream select audio and video codecs",
+      "restrictions": "Networking starts Offline. Select a supported network profile in Permissions. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "qt-faststart",
+      "formula": "ffmpeg",
+      "binary": "bin/qt-faststart",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "qt-faststart",
+      "category": "Documents & Media",
+      "summary": "Play, record, convert, and stream select audio and video codecs",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "flac",
+      "formula": "flac",
+      "binary": "bin/flac",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "flac",
+      "category": "Documents & Media",
+      "summary": "Free lossless audio codec",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "metaflac",
+      "formula": "flac",
+      "binary": "bin/metaflac",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "metaflac",
+      "category": "Documents & Media",
+      "summary": "Free lossless audio codec",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "gh",
+      "formula": "gh",
+      "binary": "bin/gh",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker"
+      ],
+      "name": "gh",
+      "category": "Networking",
+      "summary": "GitHub command-line tool",
+      "restrictions": "Repository commands use bundled Git. Choose Outgoing Only for HTTPS clones and API requests. Grant write access to the checkout folder."
+    },
+    {
+      "id": "delta",
+      "formula": "git-delta",
+      "binary": "bin/delta",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "delta",
+      "category": "Networking",
+      "summary": "Syntax-highlighting pager for git and diff output",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "glab",
+      "formula": "glab",
+      "binary": "bin/glab",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker"
+      ],
+      "name": "glab",
+      "category": "Networking",
+      "summary": "Open-source GitLab command-line tool",
+      "restrictions": "Repository commands use bundled Git. Choose Outgoing Only for HTTPS clones and API requests. Grant write access to the checkout folder.",
+      "noticeSource": {
+        "url": "https://gitlab.com/gitlab-org/cli/-/archive/9b430a11f95ec78d87f19be071d1c381d8803630/cli-9b430a11f95ec78d87f19be071d1c381d8803630.tar.gz",
+        "sha256": "fb0d1f5c81928e90ad5071c32cd05beb7b34df7521fc9329c774fc8584c1e174",
+        "version": "1.130.0"
+      }
+    },
+    {
+      "id": "grex",
+      "formula": "grex",
+      "binary": "bin/grex",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "grex",
+      "category": "Text & Search",
+      "summary": "Command-line tool for generating regular expressions",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "gron",
+      "formula": "gron",
+      "binary": "bin/gron",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker"
+      ],
+      "name": "gron",
+      "category": "Data & Formats",
+      "summary": "Make JSON greppable",
+      "restrictions": "Networking starts Offline. Outgoing access enables HTTP and HTTPS inputs. Files require folder access."
+    },
+    {
+      "id": "grpcurl",
+      "formula": "grpcurl",
+      "binary": "bin/grpcurl",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker"
+      ],
+      "name": "grpcurl",
+      "category": "Networking",
+      "summary": "Like cURL, but for gRPC",
+      "restrictions": "Networking starts Offline. Select a supported network profile in Permissions. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "helm",
+      "formula": "helm",
+      "binary": "bin/helm",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker"
+      ],
+      "name": "helm",
+      "category": "Networking",
+      "summary": "Kubernetes package manager",
+      "restrictions": "Networking starts Offline. Select a supported network profile in Permissions. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "noticeSource": {
+        "url": "https://github.com/helm/helm/archive/8346aaa55e7161f7c547212d0a87f01367976727.tar.gz",
+        "sha256": "a8925a161c568522f6f4ca778446c06152e968c31e7f64bab8423de03f2e6cba",
+        "version": "4.3.2"
+      }
+    },
+    {
+      "id": "hexedit",
+      "formula": "hexedit",
+      "binary": "bin/hexedit",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "hexedit",
+      "category": "Utilities",
+      "summary": "View and edit files in hexadecimal or ASCII",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode. Interactive use requires sourced terminal setup. Batch and stream modes remain available.",
+      "launchPolicy": "interactive"
+    },
+    {
+      "id": "hexyl",
+      "formula": "hexyl",
+      "binary": "bin/hexyl",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "hexyl",
+      "category": "Text & Search",
+      "summary": "Command-line hex viewer",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "hurl",
+      "formula": "hurl",
+      "binary": "bin/hurl",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker"
+      ],
+      "name": "hurl",
+      "category": "Networking",
+      "summary": "Run and Test HTTP Requests with plain text and curl",
+      "restrictions": "Networking starts Offline. Select a supported network profile in Permissions. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "hurlfmt",
+      "formula": "hurl",
+      "binary": "bin/hurlfmt",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "hurlfmt",
+      "category": "Networking",
+      "summary": "Run and Test HTTP Requests with plain text and curl",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "hyperfine",
+      "formula": "hyperfine",
+      "binary": "bin/hyperfine",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "hyperfine",
+      "category": "Developer Tools",
+      "summary": "Command-line benchmarking tool",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "innoextract",
+      "formula": "innoextract",
+      "binary": "bin/innoextract",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "innoextract",
+      "category": "Files & Folders",
+      "summary": "Tool to unpack installers created by Inno Setup",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "jaq",
+      "formula": "jaq",
+      "binary": "bin/jaq",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "jaq",
+      "category": "Data & Formats",
+      "summary": "JQ clone focussed on correctness, speed, and simplicity",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "jdupes",
+      "formula": "jdupes",
+      "binary": "bin/jdupes",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "jdupes",
+      "category": "Files & Folders",
+      "summary": "Duplicate file finder and an enhanced fork of 'fdupes'",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "jpegoptim",
+      "formula": "jpegoptim",
+      "binary": "bin/jpegoptim",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "jpegoptim",
+      "category": "Documents & Media",
+      "summary": "Utility to optimize JPEG files",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "jsonnet",
+      "formula": "jsonnet",
+      "binary": "bin/jsonnet",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "jsonnet",
+      "category": "Data & Formats",
+      "summary": "Domain specific configuration language for defining JSON data",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "jsonnetfmt",
+      "formula": "jsonnet",
+      "binary": "bin/jsonnetfmt",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "jsonnetfmt",
+      "category": "Data & Formats",
+      "summary": "Domain specific configuration language for defining JSON data",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "jwt",
+      "formula": "jwt-cli",
+      "binary": "bin/jwt",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "jwt",
+      "category": "Utilities",
+      "summary": "Super fast CLI tool to decode and encode JWTs built in Rust",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "kubeconform",
+      "formula": "kubeconform",
+      "binary": "bin/kubeconform",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker"
+      ],
+      "name": "kubeconform",
+      "category": "Networking",
+      "summary": "FAST Kubernetes manifests validator, with support for Custom Resources!",
+      "restrictions": "Networking starts Offline. Select a supported network profile in Permissions. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "kubectl",
+      "formula": "kubernetes-cli",
+      "binary": "bin/kubectl",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker",
+        "IncomingWorker",
+        "BidirectionalWorker"
+      ],
+      "name": "kubectl",
+      "category": "Networking",
+      "summary": "Kubernetes command-line interface",
+      "restrictions": "Grant access to your kubeconfig folder. Select a file with --kubeconfig or KUBECONFIG. Cluster connections need outgoing access. Use sourced Terminal Setup for interactive exec and attach.",
+      "noticeSource": {
+        "url": "https://github.com/kubernetes/kubernetes/archive/c50e5395f1ae2d4a2c05f28fdcc38c0916cc1a32.tar.gz",
+        "sha256": "98bba0e23e7c6b6d48947b1c8ea27d454d37797402b9f874b78a397c83c7a0de",
+        "version": "1.37.2"
+      },
+      "launchPolicy": "kubectl"
+    },
+    {
+      "id": "kustomize",
+      "formula": "kustomize",
+      "binary": "bin/kustomize",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker"
+      ],
+      "name": "kustomize",
+      "category": "Networking",
+      "summary": "Template-free customization of Kubernetes YAML manifests",
+      "restrictions": "Networking starts Offline. Select a supported network profile in Permissions. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "bsdtar",
+      "formula": "libarchive",
+      "binary": "bin/bsdtar",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "bsdtar",
+      "category": "Files & Folders",
+      "summary": "Multi-format archive and compression library",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "bsdcpio",
+      "formula": "libarchive",
+      "binary": "bin/bsdcpio",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "bsdcpio",
+      "category": "Files & Folders",
+      "summary": "Multi-format archive and compression library",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "bsdcat",
+      "formula": "libarchive",
+      "binary": "bin/bsdcat",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "bsdcat",
+      "category": "Files & Folders",
+      "summary": "Multi-format archive and compression library",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "bsdunzip",
+      "formula": "libarchive",
+      "binary": "bin/bsdunzip",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "bsdunzip",
+      "category": "Files & Folders",
+      "summary": "Multi-format archive and compression library",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "lowdown",
+      "formula": "lowdown",
+      "binary": "bin/lowdown",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "lowdown",
+      "category": "Data & Formats",
+      "summary": "Simple markdown translator",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "lowdown-diff",
+      "formula": "lowdown",
+      "binary": "bin/lowdown-diff",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "lowdown-diff",
+      "category": "Data & Formats",
+      "summary": "Simple markdown translator",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "lsd",
+      "formula": "lsd",
+      "binary": "bin/lsd",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "lsd",
+      "category": "Files & Folders",
+      "summary": "Clone of ls with colorful output, file type icons, and more",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "lz4",
+      "formula": "lz4",
+      "binary": "bin/lz4",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "lz4",
+      "category": "Files & Folders",
+      "summary": "Extremely Fast Compression algorithm",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "lz4c",
+      "formula": "lz4",
+      "binary": "bin/lz4c",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "lz4c",
+      "category": "Files & Folders",
+      "summary": "Extremely Fast Compression algorithm",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "lz4cat",
+      "formula": "lz4",
+      "binary": "bin/lz4cat",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "lz4cat",
+      "category": "Files & Folders",
+      "summary": "Extremely Fast Compression algorithm",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "unlz4",
+      "formula": "lz4",
+      "binary": "bin/unlz4",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "unlz4",
+      "category": "Files & Folders",
+      "summary": "Extremely Fast Compression algorithm",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "md2html",
+      "formula": "md4c",
+      "binary": "bin/md2html",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "md2html",
+      "category": "Data & Formats",
+      "summary": "C Markdown parser. Fast. SAX-like interface",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "mediainfo",
+      "formula": "media-info",
+      "binary": "bin/mediainfo",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "mediainfo",
+      "category": "Documents & Media",
+      "summary": "Unified display of technical and tag data for audio/video",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "mlr",
+      "formula": "miller",
+      "binary": "bin/mlr",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "mlr",
+      "category": "Data & Formats",
+      "summary": "Like sed, awk, cut, join & sort for name-indexed data such as CSV",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "minisign",
+      "formula": "minisign",
+      "binary": "bin/minisign",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "minisign",
+      "category": "Utilities",
+      "summary": "Sign files & verify signatures. Works with signify in OpenBSD",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "optipng",
+      "formula": "optipng",
+      "binary": "bin/optipng",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "optipng",
+      "category": "Documents & Media",
+      "summary": "PNG file optimizer",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "oxipng",
+      "formula": "oxipng",
+      "binary": "bin/oxipng",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "oxipng",
+      "category": "Documents & Media",
+      "summary": "Multithreaded PNG optimizer written in Rust",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "pandoc",
+      "formula": "pandoc",
+      "binary": "bin/pandoc",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker"
+      ],
+      "name": "pandoc",
+      "category": "Documents & Media",
+      "summary": "Swiss-army knife of markup format conversion",
+      "restrictions": "Networking starts Offline. Select a supported network profile in Permissions. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "pigz",
+      "formula": "pigz",
+      "binary": "bin/pigz",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "pigz",
+      "category": "Files & Folders",
+      "summary": "Parallel gzip",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "unpigz",
+      "formula": "pigz",
+      "binary": "bin/unpigz",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "unpigz",
+      "category": "Files & Folders",
+      "summary": "Parallel gzip",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "pngcheck",
+      "formula": "pngcheck",
+      "binary": "bin/pngcheck",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "pngcheck",
+      "category": "Documents & Media",
+      "summary": "Print info and check PNG, JNG, and MNG files",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "pup",
+      "formula": "pup",
+      "binary": "bin/pup",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker"
+      ],
+      "name": "pup (Datadog)",
+      "category": "Networking",
+      "summary": "CLI companion with 200+ commands across 33+ Datadog products",
+      "restrictions": "Networking starts Offline. This is the current Datadog CLI named pup, not the older HTML selector. API requests require Outgoing Only and the user's Datadog credentials."
+    },
+    {
+      "id": "pv",
+      "formula": "pv",
+      "binary": "bin/pv",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "pv",
+      "category": "Files & Folders",
+      "summary": "Monitor data's progress through a pipe",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "qpdf",
+      "formula": "qpdf",
+      "binary": "bin/qpdf",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "qpdf",
+      "category": "Documents & Media",
+      "summary": "Tools for and transforming and inspecting PDF files",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "fix-qdf",
+      "formula": "qpdf",
+      "binary": "bin/fix-qdf",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "fix-qdf",
+      "category": "Documents & Media",
+      "summary": "Tools for and transforming and inspecting PDF files",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "zlib-flate",
+      "formula": "qpdf",
+      "binary": "bin/zlib-flate",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "zlib-flate",
+      "category": "Documents & Media",
+      "summary": "Tools for and transforming and inspecting PDF files",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "qrencode",
+      "formula": "qrencode",
+      "binary": "bin/qrencode",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "qrencode",
+      "category": "Documents & Media",
+      "summary": "QR Code generation",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "qsv",
+      "formula": "qsv",
+      "binary": "bin/qsv",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker"
+      ],
+      "name": "qsv",
+      "category": "Data & Formats",
+      "summary": "Ultra-fast CSV data-wrangling toolkit",
+      "restrictions": "Networking starts Offline. Select a supported network profile in Permissions. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "rclone",
+      "formula": "rclone",
+      "binary": "bin/rclone",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker",
+        "IncomingWorker",
+        "BidirectionalWorker"
+      ],
+      "name": "rclone",
+      "category": "Networking",
+      "summary": "Rsync for cloud storage",
+      "restrictions": "Networking starts Offline. Select a supported network profile in Permissions. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "rdfind",
+      "formula": "rdfind",
+      "binary": "bin/rdfind",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "rdfind",
+      "category": "Files & Folders",
+      "summary": "Find duplicate files based on content (NOT file names)",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "restic",
+      "formula": "restic",
+      "binary": "bin/restic",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker"
+      ],
+      "name": "restic",
+      "category": "Networking",
+      "summary": "Fast, efficient and secure backup program",
+      "restrictions": "SFTP repositories use bundled SSH with Outgoing Only. Put keys and known_hosts in .ssh under restic's HOME, or explicitly grant your .ssh folder. Use --password-file for the repository password."
+    },
+    {
+      "id": "ed2k-link",
+      "formula": "rhash",
+      "binary": "bin/ed2k-link",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "ed2k-link",
+      "category": "Utilities",
+      "summary": "Utility for computing and verifying hash sums of files",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "edonr256-hash",
+      "formula": "rhash",
+      "binary": "bin/edonr256-hash",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "edonr256-hash",
+      "category": "Utilities",
+      "summary": "Utility for computing and verifying hash sums of files",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "edonr512-hash",
+      "formula": "rhash",
+      "binary": "bin/edonr512-hash",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "edonr512-hash",
+      "category": "Utilities",
+      "summary": "Utility for computing and verifying hash sums of files",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "gost12-256-hash",
+      "formula": "rhash",
+      "binary": "bin/gost12-256-hash",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "gost12-256-hash",
+      "category": "Utilities",
+      "summary": "Utility for computing and verifying hash sums of files",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "gost12-512-hash",
+      "formula": "rhash",
+      "binary": "bin/gost12-512-hash",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "gost12-512-hash",
+      "category": "Utilities",
+      "summary": "Utility for computing and verifying hash sums of files",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "has160-hash",
+      "formula": "rhash",
+      "binary": "bin/has160-hash",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "has160-hash",
+      "category": "Utilities",
+      "summary": "Utility for computing and verifying hash sums of files",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "magnet-link",
+      "formula": "rhash",
+      "binary": "bin/magnet-link",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "magnet-link",
+      "category": "Utilities",
+      "summary": "Utility for computing and verifying hash sums of files",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "rhash",
+      "formula": "rhash",
+      "binary": "bin/rhash",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "rhash",
+      "category": "Utilities",
+      "summary": "Utility for computing and verifying hash sums of files",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "sfv-hash",
+      "formula": "rhash",
+      "binary": "bin/sfv-hash",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "sfv-hash",
+      "category": "Utilities",
+      "summary": "Utility for computing and verifying hash sums of files",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "tiger-hash",
+      "formula": "rhash",
+      "binary": "bin/tiger-hash",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "tiger-hash",
+      "category": "Utilities",
+      "summary": "Utility for computing and verifying hash sums of files",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "tth-hash",
+      "formula": "rhash",
+      "binary": "bin/tth-hash",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "tth-hash",
+      "category": "Utilities",
+      "summary": "Utility for computing and verifying hash sums of files",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "whirlpool-hash",
+      "formula": "rhash",
+      "binary": "bin/whirlpool-hash",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "whirlpool-hash",
+      "category": "Utilities",
+      "summary": "Utility for computing and verifying hash sums of files",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "ruff",
+      "formula": "ruff",
+      "binary": "bin/ruff",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "ruff",
+      "category": "Developer Tools",
+      "summary": "Extremely fast Python linter, written in Rust",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "scc",
+      "formula": "scc",
+      "binary": "bin/scc",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "scc",
+      "category": "Developer Tools",
+      "summary": "Fast and accurate code counter with complexity and COCOMO estimates",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "sd",
+      "formula": "sd",
+      "binary": "bin/sd",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "sd",
+      "category": "Text & Search",
+      "summary": "Intuitive find & replace CLI",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "shellcheck",
+      "formula": "shellcheck",
+      "binary": "bin/shellcheck",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "shellcheck",
+      "category": "Developer Tools",
+      "summary": "Static analysis and lint tool, for (ba)sh scripts",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "shfmt",
+      "formula": "shfmt",
+      "binary": "bin/shfmt",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "shfmt",
+      "category": "Developer Tools",
+      "summary": "Autoformat shell script source code",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "sox",
+      "formula": "sox",
+      "binary": "bin/sox",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "sox",
+      "category": "Documents & Media",
+      "summary": "SOund eXchange: universal sound sample translator",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "soxi",
+      "formula": "sox",
+      "binary": "bin/soxi",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "soxi",
+      "category": "Documents & Media",
+      "summary": "SOund eXchange: universal sound sample translator",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "sqlite3",
+      "formula": "sqlite",
+      "binary": "bin/sqlite3",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "sqlite3",
+      "category": "Data & Formats",
+      "summary": "Command-line interface for SQLite",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "tcping",
+      "formula": "tcping",
+      "binary": "bin/tcping",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker"
+      ],
+      "name": "tcping",
+      "category": "Networking",
+      "summary": "TCP connect to the given IP/port combo",
+      "restrictions": "Networking starts Offline. Select a supported network profile in Permissions. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "ag",
+      "formula": "the_silver_searcher",
+      "binary": "bin/ag",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "ag",
+      "category": "Text & Search",
+      "summary": "Code-search similar to ack",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "tidy",
+      "formula": "tidy-html5",
+      "binary": "bin/tidy",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "tidy",
+      "category": "Data & Formats",
+      "summary": "Granddaddy of HTML tools, with support for modern standards",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "tokei",
+      "formula": "tokei",
+      "binary": "bin/tokei",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "tokei",
+      "category": "Developer Tools",
+      "summary": "Program that allows you to count code, quickly",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "tree",
+      "formula": "tree",
+      "binary": "bin/tree",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "tree",
+      "category": "Files & Folders",
+      "summary": "Display directories as trees (with optional color/HTML output)",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "typos",
+      "formula": "typos-cli",
+      "binary": "bin/typos",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "typos",
+      "category": "Developer Tools",
+      "summary": "Source code spell checker",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "ugrep",
+      "formula": "ugrep",
+      "binary": "bin/ugrep",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "ugrep",
+      "category": "Text & Search",
+      "summary": "Ultra fast grep with query UI, fuzzy search, archive search, and more",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "ug",
+      "formula": "ugrep",
+      "binary": "bin/ug",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "ug",
+      "category": "Text & Search",
+      "summary": "Ultra fast grep with query UI, fuzzy search, archive search, and more",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "ugrep-indexer",
+      "formula": "ugrep",
+      "binary": "bin/ugrep-indexer",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "ugrep-indexer",
+      "category": "Text & Search",
+      "summary": "Ultra fast grep with query UI, fuzzy search, archive search, and more",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "unshield",
+      "formula": "unshield",
+      "binary": "bin/unshield",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "unshield",
+      "category": "Files & Folders",
+      "summary": "Extract files from InstallShield cabinet files",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "uutils-coreutils-base64",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-base64",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "base64",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "base64",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-basename",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-basename",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "basename",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "basename",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-cat",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-cat",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "cat",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "cat",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-chmod",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-chmod",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "chmod",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "chmod",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-cksum",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-cksum",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "cksum",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "cksum",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-comm",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-comm",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "comm",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "comm",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-cp",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-cp",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "cp",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "cp",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-cut",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-cut",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "cut",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "cut",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-date",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-date",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "date",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "date",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-df",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-df",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "df",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "df",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-dirname",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-dirname",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "dirname",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "dirname",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-du",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-du",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "du",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "du",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-echo",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-echo",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "echo",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "echo",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-env",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-env",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker",
+        "IncomingWorker",
+        "BidirectionalWorker"
+      ],
+      "name": "env",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Child commands inherit this invocation's folder and network permissions. Managed commands follow the selected call mode. Networking starts Offline.",
+      "command": "env",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-expand",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-expand",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "expand",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "expand",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-expr",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-expr",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "expr",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "expr",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-false",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-false",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "false",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "false",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-fmt",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-fmt",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "fmt",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "fmt",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-fold",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-fold",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "fold",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "fold",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-head",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-head",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "head",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "head",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-join",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-join",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "join",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "join",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-ln",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-ln",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "ln",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "ln",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-ls",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-ls",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "ls",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "ls",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-mkdir",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-mkdir",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "mkdir",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "mkdir",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-mktemp",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-mktemp",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "mktemp",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "mktemp",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-mv",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-mv",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "mv",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "mv",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-nl",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-nl",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "nl",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "nl",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-od",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-od",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "od",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "od",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-paste",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-paste",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "paste",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "paste",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-printf",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-printf",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "printf",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "printf",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-pwd",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-pwd",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "pwd",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "pwd",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-readlink",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-readlink",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "readlink",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "readlink",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-rm",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-rm",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "rm",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "rm",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-rmdir",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-rmdir",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "rmdir",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "rmdir",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-seq",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-seq",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "seq",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "seq",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-sleep",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-sleep",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "sleep",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "sleep",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-sort",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-sort",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "sort",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "sort",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-split",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-split",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "split",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "split",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-stat",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-stat",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "stat",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "stat",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-tail",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-tail",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "tail",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "tail",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-tee",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-tee",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "tee",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "tee",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-touch",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-touch",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "touch",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "touch",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-tr",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-tr",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "tr",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "tr",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-true",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-true",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "true",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "true",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-truncate",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-truncate",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "truncate",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "truncate",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-uname",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-uname",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "uname",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "uname",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-unexpand",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-unexpand",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "unexpand",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "unexpand",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-uniq",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-uniq",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "uniq",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "uniq",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-wc",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-wc",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "wc",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "wc",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-coreutils-whoami",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-whoami",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "whoami",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "command": "whoami",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "coreutils",
+      "formula": "uutils-coreutils",
+      "binary": "bin/uu-coreutils",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker",
+        "IncomingWorker",
+        "BidirectionalWorker"
+      ],
+      "name": "coreutils",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU coreutils",
+      "restrictions": "Child commands inherit this invocation's folder and network permissions. Managed commands follow the selected call mode. Networking starts Offline.",
+      "command": "coreutils",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-diffutils-diffutils",
+      "formula": "uutils-diffutils",
+      "binary": "bin/diffutils",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "diffutils",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU diffutils",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode.",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-findutils-find",
+      "formula": "uutils-findutils",
+      "binary": "bin/uu-find",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker",
+        "IncomingWorker",
+        "BidirectionalWorker"
+      ],
+      "name": "find",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU findutils",
+      "restrictions": "Child commands inherit this invocation's folder and network permissions. Managed commands follow the selected call mode. Networking starts Offline.",
+      "command": "find",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "uutils-findutils-xargs",
+      "formula": "uutils-findutils",
+      "binary": "bin/uu-xargs",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker",
+        "IncomingWorker",
+        "BidirectionalWorker"
+      ],
+      "name": "xargs",
+      "category": "Utilities",
+      "summary": "Cross-platform Rust rewrite of the GNU findutils",
+      "restrictions": "Child commands inherit this invocation's folder and network permissions. Managed commands follow the selected call mode. Networking starts Offline.",
+      "command": "xargs",
+      "variant": "uutils (Rust)"
+    },
+    {
+      "id": "cwebp",
+      "formula": "webp",
+      "binary": "bin/cwebp",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "cwebp",
+      "category": "Documents & Media",
+      "summary": "Image format providing lossless and lossy compression for web images",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "dwebp",
+      "formula": "webp",
+      "binary": "bin/dwebp",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "dwebp",
+      "category": "Documents & Media",
+      "summary": "Image format providing lossless and lossy compression for web images",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "gif2webp",
+      "formula": "webp",
+      "binary": "bin/gif2webp",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "gif2webp",
+      "category": "Documents & Media",
+      "summary": "Image format providing lossless and lossy compression for web images",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "img2webp",
+      "formula": "webp",
+      "binary": "bin/img2webp",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "img2webp",
+      "category": "Documents & Media",
+      "summary": "Image format providing lossless and lossy compression for web images",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "webpinfo",
+      "formula": "webp",
+      "binary": "bin/webpinfo",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "webpinfo",
+      "category": "Documents & Media",
+      "summary": "Image format providing lossless and lossy compression for web images",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "webpmux",
+      "formula": "webp",
+      "binary": "bin/webpmux",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "webpmux",
+      "category": "Documents & Media",
+      "summary": "Image format providing lossless and lossy compression for web images",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "whois",
+      "formula": "whois",
+      "binary": "bin/whois",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker"
+      ],
+      "name": "whois",
+      "category": "Networking",
+      "summary": "Lookup tool for domain names and other internet resources",
+      "restrictions": "Networking starts Offline. Select a supported network profile in Permissions. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "xan",
+      "formula": "xan",
+      "binary": "bin/xan",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker"
+      ],
+      "name": "xan",
+      "category": "Data & Formats",
+      "summary": "CSV CLI magician written in Rust",
+      "restrictions": "Networking starts Offline. Select a supported network profile in Permissions. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "xh",
+      "formula": "xh",
+      "binary": "bin/xh",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker"
+      ],
+      "name": "xh",
+      "category": "Networking",
+      "summary": "Friendly and fast tool for sending HTTP requests",
+      "restrictions": "Networking starts Offline. Select a supported network profile in Permissions. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "xhs",
+      "formula": "xh",
+      "binary": "bin/xhs",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker"
+      ],
+      "name": "xhs",
+      "category": "Networking",
+      "summary": "Friendly and fast tool for sending HTTP requests",
+      "restrictions": "Networking starts Offline. Select a supported network profile in Permissions. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "xmlstarlet",
+      "formula": "xmlstarlet",
+      "binary": "bin/xmlstarlet",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker"
+      ],
+      "name": "xmlstarlet",
+      "category": "Data & Formats",
+      "summary": "XML command-line utilities",
+      "restrictions": "Networking starts Offline. Select a supported network profile in Permissions. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "xxh128sum",
+      "formula": "xxhash",
+      "binary": "bin/xxh128sum",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "xxh128sum",
+      "category": "Utilities",
+      "summary": "Extremely fast non-cryptographic hash algorithm",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "xxh32sum",
+      "formula": "xxhash",
+      "binary": "bin/xxh32sum",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "xxh32sum",
+      "category": "Utilities",
+      "summary": "Extremely fast non-cryptographic hash algorithm",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "xxh3sum",
+      "formula": "xxhash",
+      "binary": "bin/xxh3sum",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "xxh3sum",
+      "category": "Utilities",
+      "summary": "Extremely fast non-cryptographic hash algorithm",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "xxh64sum",
+      "formula": "xxhash",
+      "binary": "bin/xxh64sum",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "xxh64sum",
+      "category": "Utilities",
+      "summary": "Extremely fast non-cryptographic hash algorithm",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "xxhsum",
+      "formula": "xxhash",
+      "binary": "bin/xxhsum",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "xxhsum",
+      "category": "Utilities",
+      "summary": "Extremely fast non-cryptographic hash algorithm",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "xz",
+      "formula": "xz",
+      "binary": "bin/xz",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "xz",
+      "category": "Files & Folders",
+      "summary": "General-purpose data compression with high compression ratio",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "xzdec",
+      "formula": "xz",
+      "binary": "bin/xzdec",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "xzdec",
+      "category": "Files & Folders",
+      "summary": "General-purpose data compression with high compression ratio",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "lzma",
+      "formula": "xz",
+      "binary": "bin/lzma",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "lzma",
+      "category": "Files & Folders",
+      "summary": "General-purpose data compression with high compression ratio",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "lzmadec",
+      "formula": "xz",
+      "binary": "bin/lzmadec",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "lzmadec",
+      "category": "Files & Folders",
+      "summary": "General-purpose data compression with high compression ratio",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "lzmainfo",
+      "formula": "xz",
+      "binary": "bin/lzmainfo",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "lzmainfo",
+      "category": "Files & Folders",
+      "summary": "General-purpose data compression with high compression ratio",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "xzcat",
+      "formula": "xz",
+      "binary": "bin/xzcat",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "xzcat",
+      "category": "Files & Folders",
+      "summary": "General-purpose data compression with high compression ratio",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "unxz",
+      "formula": "xz",
+      "binary": "bin/unxz",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "unxz",
+      "category": "Files & Folders",
+      "summary": "General-purpose data compression with high compression ratio",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "unlzma",
+      "formula": "xz",
+      "binary": "bin/unlzma",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "unlzma",
+      "category": "Files & Folders",
+      "summary": "General-purpose data compression with high compression ratio",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "lzcat",
+      "formula": "xz",
+      "binary": "bin/lzcat",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "lzcat",
+      "category": "Files & Folders",
+      "summary": "General-purpose data compression with high compression ratio",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "yq",
+      "formula": "yq",
+      "binary": "bin/yq",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "yq",
+      "category": "Data & Formats",
+      "summary": "Process YAML, JSON, XML, CSV and properties documents from the CLI",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "zstd",
+      "formula": "zstd",
+      "binary": "bin/zstd",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "zstd",
+      "category": "Files & Folders",
+      "summary": "Zstandard is a real-time compression algorithm",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "zstdcat",
+      "formula": "zstd",
+      "binary": "bin/zstdcat",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "zstdcat",
+      "category": "Files & Folders",
+      "summary": "Zstandard is a real-time compression algorithm",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "unzstd",
+      "formula": "zstd",
+      "binary": "bin/unzstd",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "unzstd",
+      "category": "Files & Folders",
+      "summary": "Zstandard is a real-time compression algorithm",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "pzstd",
+      "formula": "zstd",
+      "binary": "bin/pzstd",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "pzstd",
+      "category": "Files & Folders",
+      "summary": "Zstandard is a real-time compression algorithm",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode."
+    },
+    {
+      "id": "ncdu",
+      "formula": "ncdu",
+      "binary": "bin/ncdu",
+      "xpcServices": [
+        "OfflineWorker"
+      ],
+      "name": "ncdu",
+      "category": "Files & Folders",
+      "summary": "NCurses Disk Usage",
+      "restrictions": "Offline only. Files require folder access. Child processes inherit this invocation's sandbox. Managed commands follow the selected call mode. Interactive use requires sourced terminal setup. Batch and stream modes remain available.",
+      "launchPolicy": "interactive"
+    },
+    {
+      "id": "git-client",
+      "formula": "git",
+      "binary": "bin/git",
+      "command": "git",
+      "launchPolicy": "interactive",
+      "xpcServices": [
+        "OfflineWorker",
+        "OutgoingWorker"
+      ],
+      "name": "Git",
+      "category": "Developer Tools",
+      "symbol": "point.3.connected.trianglepath.dotted",
+      "summary": "Track changes, commit files, and synchronize repositories over HTTPS or SSH.",
+      "restrictions": "Grant read/write access to the folder where you work. Local repositories work Offline. Choose Outgoing Only for HTTPS and SSH remotes. SSH uses trusted host keys and a noninteractive key in Git's HOME/.ssh or an explicitly granted account .ssh folder. Use Terminal Setup for interactive staging. Use commit -m to supply a message. Repository hooks are disabled by default.",
+      "manuals": {
+        "root": "bottle",
+        "paths": [
+          "share/man/man1/git.1",
+          "share/man/man7/gittutorial.7",
+          "share/man/man1/git-add.1",
+          "share/man/man1/git-commit.1",
+          "share/man/man1/git-clone.1",
+          "share/man/man7/gitcredentials.7"
+        ]
+      }
+    },
+    {
+      "id": "git-https",
+      "formula": "git",
+      "binary": "libexec/git-core/git-remote-https",
+      "command": "git-remote-https",
+      "transportFor": [
+        "gh",
+        "glab",
+        "git-client"
+      ],
+      "xpcServices": [
+        "OutgoingWorker"
+      ],
+      "name": "Git",
+      "manuals": {
+        "root": "bottle",
+        "paths": [
+          "share/man/man1/git.1"
+        ]
+      }
+    }
+  ]
+}

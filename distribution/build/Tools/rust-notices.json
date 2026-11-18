@@ -1,0 +1,50 @@
+{
+  "git+https://github.com/DataDog/datadog-api-client-rust?rev=c05aa43035c88828d0633a97dbf086fc507dfe36#c05aa43035c88828d0633a97dbf086fc507dfe36": {
+    "url": "https://github.com/DataDog/datadog-api-client-rust/archive/c05aa43035c88828d0633a97dbf086fc507dfe36.tar.gz",
+    "sha256": "11cd4a5dd5e1f6de855078915b1babdea57bed2b4fd7af9654692e3f62a3f29b"
+  },
+  "git+https://github.com/dathere/plotly?rev=b652677502d667edb2caa09dc930a6fe294ce3f4#b652677502d667edb2caa09dc930a6fe294ce3f4": {
+    "url": "https://github.com/dathere/plotly/archive/b652677502d667edb2caa09dc930a6fe294ce3f4.tar.gz",
+    "sha256": "4a8b6d3c423ea19e8b736ef4cd6a898c045285aff1b4c861309b37e9bc3fd779"
+  },
+  "git+https://github.com/dathere/rust-csv?branch=qsv-tuned#1be3567a8d18c62bd558db0ba6b0cd6f3fcf8527": {
+    "url": "https://github.com/dathere/rust-csv/archive/1be3567a8d18c62bd558db0ba6b0cd6f3fcf8527.tar.gz",
+    "sha256": "e55f0a19a833ef5c3786d960cd40ac4860a578d5833dd3d189d215f178161d8e"
+  },
+  "git+https://github.com/jqnatividad/compact_bytes?branch=main#f21a6acee403159c5c0f58ef405a8dde53c3dadd": {
+    "url": "https://github.com/jqnatividad/compact_bytes/archive/f21a6acee403159c5c0f58ef405a8dde53c3dadd.tar.gz",
+    "sha256": "94780bea4719c2f7339f0fbc6fd18fe3899c509ee90124616633466876dabf8f"
+  },
+  "git+https://github.com/jqnatividad/csvlens?branch=deps-bump-2026-11#6a1bf0205ce45613ca2cf3f90e11a94be62e9115": {
+    "url": "https://github.com/jqnatividad/csvlens/archive/6a1bf0205ce45613ca2cf3f90e11a94be62e9115.tar.gz",
+    "sha256": "9ac9b1f0ab75f55a881d35920af4628fd541f39f597688061107f0521a57d291"
+  },
+  "git+https://github.com/jqnatividad/csvs_convert?branch=replace-streaming-stats-redux#b79a454214ce4f6bfb3f9f021f5eb4b164d207b2": {
+    "url": "https://github.com/jqnatividad/csvs_convert/archive/b79a454214ce4f6bfb3f9f021f5eb4b164d207b2.tar.gz",
+    "sha256": "2faa0198ff70fc7bc488573f11820694b5f87cb373a8c3ea9abf214131822655"
+  },
+  "git+https://github.com/jqnatividad/spreadsheet-ods?branch=deps-bump-202607#971c94d499cde7f248cbb853c48efa750f362a34": {
+    "url": "https://github.com/jqnatividad/spreadsheet-ods/archive/971c94d499cde7f248cbb853c48efa750f362a34.tar.gz",
+    "sha256": "75621133728606de88e2e75a5be5cfda08a5a162af967b407c9bda11151f6d78"
+  },
+  "git+https://github.com/jqnatividad/whatlang-rs?branch=bump-hashbrown-to-16#ab1080561a0f59cd95b55fce6028c4491d380e25": {
+    "url": "https://github.com/jqnatividad/whatlang-rs/archive/ab1080561a0f59cd95b55fce6028c4491d380e25.tar.gz",
+    "sha256": "1afb42685712613bfc57bfc4c5ee3028904fbed7c897d7bbdc37eef4b2b7718b"
+  },
+  "git+https://github.com/mlua-rs/mlua?rev=a0ad4535fc72ba89967a931c5be57b162b5f0f3f#a0ad4535fc72ba89967a931c5be57b162b5f0f3f": {
+    "url": "https://github.com/mlua-rs/mlua/archive/a0ad4535fc72ba89967a931c5be57b162b5f0f3f.tar.gz",
+    "sha256": "8676e56643584b3370d463a0be299b0f07db4655e819b8b9646490b67ab06bf4"
+  },
+  "git+https://github.com/pola-rs/hashbrown?rev=d76a6f81abd8f388676aff15068236a8d21c7e1a#d76a6f81abd8f388676aff15068236a8d21c7e1a": {
+    "url": "https://github.com/pola-rs/hashbrown/archive/d76a6f81abd8f388676aff15068236a8d21c7e1a.tar.gz",
+    "sha256": "73ec2342ace1aca956e882f79cb949ef3cc8a7d27aa6460171c61c7ce0ae2a95"
+  },
+  "git+https://github.com/pola-rs/polars?rev=2d9938dfa3558a89c5d7a05d4ff1b0e5afccfd59#2d9938dfa3558a89c5d7a05d4ff1b0e5afccfd59": {
+    "url": "https://github.com/pola-rs/polars/archive/2d9938dfa3558a89c5d7a05d4ff1b0e5afccfd59.tar.gz",
+    "sha256": "10db040e4cf6e09b077b141476f6063279fa4f531c11c60993097733f10016c5"
+  },
+  "git+https://github.com/react/react?rev=78c2d377d79a7284339fc24b560dd503daf314cc#78c2d377d79a7284339fc24b560dd503daf314cc": {
+    "url": "https://github.com/react/react/archive/78c2d377d79a7284339fc24b560dd503daf314cc.tar.gz",
+    "sha256": "918185ccc8f6c996847e1b2ec6492199fb6b4fd35f493ecf59ad86b924eafcae"
+  }
+}

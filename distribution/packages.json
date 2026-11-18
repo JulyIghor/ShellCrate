@@ -1,0 +1,3516 @@
+[
+  {
+    "id": "7zz",
+    "command": "7zz",
+    "version": "26.06",
+    "license": "LGPL-2.1-or-later AND BSD-3-Clause",
+    "source": "63bbf0ede83e4286ec8a2905ed732a12acc36dd4771984d870b054240ce761fa",
+    "formula": "sevenzip",
+    "components": [
+      "sevenzip"
+    ],
+    "manual": {
+      "url": "https://github.com/ip7z/7zip/releases/download/26.06/7z2606-mac.tar.xz",
+      "sha256": "b6f17920b4240940461dac8ef4009891881ac44d2a5ead625ede2ec8472185dd",
+      "version": "26.06",
+      "directory": "manuals/7zz"
+    }
+  },
+  {
+    "id": "actionlint",
+    "command": "actionlint",
+    "version": "1.7.12",
+    "license": "MIT",
+    "source": "454800bd4f854592bcfe79b161f71d56e35940eb7016e48a26dd356adc9d400a",
+    "formula": "actionlint",
+    "components": [
+      "actionlint"
+    ]
+  },
+  {
+    "id": "ag",
+    "command": "ag",
+    "version": "2.2.0",
+    "license": "Apache-2.0",
+    "source": "6a0a19ca5e73b2bef9481c29a508d2413ca1a0a9a5a6b1bd9bbd695a7626cbf9",
+    "formula": "the_silver_searcher",
+    "components": [
+      "pcre2",
+      "the_silver_searcher",
+      "xz"
+    ]
+  },
+  {
+    "id": "age",
+    "command": "age",
+    "version": "1.3.2",
+    "license": "BSD-3-Clause",
+    "source": "b07c28c6c4bdafa272073a310b75bc22c49da8904585a89c30e5ca4233e63843",
+    "formula": "age",
+    "components": [
+      "age"
+    ]
+  },
+  {
+    "id": "age-inspect",
+    "command": "age-inspect",
+    "version": "1.3.2",
+    "license": "BSD-3-Clause",
+    "source": "b07c28c6c4bdafa272073a310b75bc22c49da8904585a89c30e5ca4233e63843",
+    "formula": "age",
+    "components": [
+      "age"
+    ]
+  },
+  {
+    "id": "age-keygen",
+    "command": "age-keygen",
+    "version": "1.3.2",
+    "license": "BSD-3-Clause",
+    "source": "b07c28c6c4bdafa272073a310b75bc22c49da8904585a89c30e5ca4233e63843",
+    "formula": "age",
+    "components": [
+      "age"
+    ]
+  },
+  {
+    "id": "ast-grep",
+    "command": "ast-grep",
+    "version": "0.51.3",
+    "license": "MIT",
+    "source": "2a40a15fe439f24e24a88d2dd0bd3433a47bbd5032d43f6a4aa2522e397e8def",
+    "formula": "ast-grep",
+    "components": [
+      "ast-grep"
+    ]
+  },
+  {
+    "id": "astyle",
+    "command": "astyle",
+    "version": "3.6.25",
+    "license": "MIT",
+    "source": "eb3d5d799cd204183896800b2186aa87131eb144c0e8df7a5e00c5efe4def037",
+    "formula": "astyle",
+    "components": [
+      "astyle"
+    ]
+  },
+  {
+    "id": "awk",
+    "command": "awk",
+    "version": "5.4.2",
+    "license": "GPL-3.0-or-later",
+    "source": "b95e4909533b5f988c6b5e5539b3b3ddf76e7d7df02ca2e5b5b7d6f62db78e6a",
+    "formula": "gawk",
+    "components": [
+      "ca-certificates",
+      "gawk",
+      "gettext",
+      "gmp",
+      "mpfr",
+      "readline"
+    ]
+  },
+  {
+    "id": "b3sum",
+    "command": "b3sum",
+    "version": "1.8.7",
+    "license": "CC0-1.0 OR Apache-2.0 OR (Apache-2.0 WITH LLVM-exception)",
+    "source": "c6782a28842b1c0478524ac06a4f2ede784038ee298d6e2162c0b089c4306a3c",
+    "formula": "b3sum",
+    "components": [
+      "b3sum"
+    ]
+  },
+  {
+    "id": "base64",
+    "command": "base64",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "basename",
+    "command": "basename",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "bash",
+    "command": "bash",
+    "version": "5.3.20",
+    "license": "GPL-3.0-or-later",
+    "source": "0d5cd86965f869a26cf64f4b71be7b96f90a3ba8b3d74e27e8e9d9d5550f31ba",
+    "formula": "bash",
+    "components": [
+      "bash",
+      "ca-certificates",
+      "gettext",
+      "ncurses",
+      "readline"
+    ]
+  },
+  {
+    "id": "bat",
+    "command": "bat",
+    "version": "0.26.1",
+    "license": "Apache-2.0 OR MIT",
+    "source": "4474de87e084953eefc1120cf905a79f72bbbf85091e30cf37c9214eafcaa9c9",
+    "formula": "bat",
+    "components": [
+      "bat",
+      "libgit2",
+      "libssh2",
+      "llhttp",
+      "oniguruma",
+      "openssl@4"
+    ]
+  },
+  {
+    "id": "bc",
+    "command": "bc",
+    "version": "1.08.2",
+    "license": "GPL-3.0-or-later",
+    "source": "ae470fec429775653e042015edc928d07c8c3b2fc59765172a330d3d87785f86",
+    "formula": "bc",
+    "components": [
+      "bc"
+    ]
+  },
+  {
+    "id": "biome",
+    "command": "biome",
+    "version": "2.6.8",
+    "license": "Apache-2.0 OR MIT",
+    "source": "14e8a90df2b74e24bcee56065fc076c672deacc26b31767983f3df0860abcc1e",
+    "formula": "biome",
+    "components": [
+      "biome"
+    ]
+  },
+  {
+    "id": "brotli",
+    "command": "brotli",
+    "version": "1.2.1",
+    "license": "MIT",
+    "source": "98d35d11a78dc453aebb7d10c3748f3f73ff78c8267c0dc697b8631f67bf7e8f",
+    "formula": "brotli",
+    "components": [
+      "brotli"
+    ]
+  },
+  {
+    "id": "bsdcat",
+    "command": "bsdcat",
+    "version": "3.8.11",
+    "license": "BSD-2-Clause",
+    "source": "a3dc0872b1b39da34dc18ef1b944f0f11ffd37425d70ae04be679279f1cf43d2",
+    "formula": "libarchive",
+    "components": [
+      "libarchive",
+      "libb2",
+      "lz4",
+      "xz",
+      "zstd"
+    ]
+  },
+  {
+    "id": "bsdcpio",
+    "command": "bsdcpio",
+    "version": "3.8.11",
+    "license": "BSD-2-Clause",
+    "source": "a3dc0872b1b39da34dc18ef1b944f0f11ffd37425d70ae04be679279f1cf43d2",
+    "formula": "libarchive",
+    "components": [
+      "libarchive",
+      "libb2",
+      "lz4",
+      "xz",
+      "zstd"
+    ]
+  },
+  {
+    "id": "bsdtar",
+    "command": "bsdtar",
+    "version": "3.8.11",
+    "license": "BSD-2-Clause",
+    "source": "a3dc0872b1b39da34dc18ef1b944f0f11ffd37425d70ae04be679279f1cf43d2",
+    "formula": "libarchive",
+    "components": [
+      "libarchive",
+      "libb2",
+      "lz4",
+      "xz",
+      "zstd"
+    ]
+  },
+  {
+    "id": "bsdunzip",
+    "command": "bsdunzip",
+    "version": "3.8.11",
+    "license": "BSD-2-Clause",
+    "source": "a3dc0872b1b39da34dc18ef1b944f0f11ffd37425d70ae04be679279f1cf43d2",
+    "formula": "libarchive",
+    "components": [
+      "libarchive",
+      "libb2",
+      "lz4",
+      "xz",
+      "zstd"
+    ]
+  },
+  {
+    "id": "bzcat",
+    "command": "bzcat",
+    "version": "1.0.8",
+    "license": "bzip2-1.0.6",
+    "source": "ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269",
+    "formula": "bzip2",
+    "components": [
+      "bzip2"
+    ]
+  },
+  {
+    "id": "bzip2",
+    "command": "bzip2",
+    "version": "1.0.8",
+    "license": "bzip2-1.0.6",
+    "source": "ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269",
+    "formula": "bzip2",
+    "components": [
+      "bzip2"
+    ]
+  },
+  {
+    "id": "bzip2recover",
+    "command": "bzip2recover",
+    "version": "1.0.8",
+    "license": "bzip2-1.0.6",
+    "source": "ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269",
+    "formula": "bzip2",
+    "components": [
+      "bzip2"
+    ]
+  },
+  {
+    "id": "cabextract",
+    "command": "cabextract",
+    "version": "1.12",
+    "license": "GPL-3.0-or-later",
+    "source": "8f39ad5f9c076b9c62c67dea4f8649e75dcc16899a2d8122ca32ba68262cb713",
+    "formula": "cabextract",
+    "components": [
+      "cabextract"
+    ]
+  },
+  {
+    "id": "cat",
+    "command": "cat",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "chmod",
+    "command": "chmod",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "cksum",
+    "command": "cksum",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils",
+      "openssl@4"
+    ]
+  },
+  {
+    "id": "cmark",
+    "command": "cmark",
+    "version": "0.31.2",
+    "license": "BSD-2-Clause",
+    "source": "f9bc5ca38bcb0b727f0056100fac4d743e768872e3bacec7746de28f5700d697",
+    "formula": "cmark",
+    "components": [
+      "cmark"
+    ]
+  },
+  {
+    "id": "cmark-gfm",
+    "command": "cmark-gfm",
+    "version": "0.29.0.gfm.13",
+    "license": "BSD-2-Clause",
+    "source": "5abc61798ebd9de5660bc076443c07abad2b8d15dbc11094a3a79644b8ad243a",
+    "formula": "cmark-gfm",
+    "components": [
+      "cmark-gfm"
+    ]
+  },
+  {
+    "id": "cmp",
+    "command": "cmp",
+    "version": "3.12",
+    "license": "GPL-3.0-or-later",
+    "source": "7c8b7f9fc8609141fdea9cece85249d308624391ff61dedaf528fcb337727dfd",
+    "formula": "diffutils",
+    "components": [
+      "diffutils"
+    ]
+  },
+  {
+    "id": "column",
+    "command": "column",
+    "version": "2.42.4",
+    "license": "BSD-3-Clause AND BSD-4-Clause-UC AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-or-later AND LGPL-2.1-or-later AND LicenseRef-Homebrew-public-domain",
+    "source": "fbd62a100ab7bb8746ba0661255c3c48185b1e9021507c624da01fbc696330ec",
+    "formula": "util-linux",
+    "components": [
+      "gettext",
+      "util-linux"
+    ]
+  },
+  {
+    "id": "comm",
+    "command": "comm",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "compress",
+    "command": "compress",
+    "version": "5.0",
+    "license": "Unlicense",
+    "source": "96ec931d06ab827fccad377839bfb91955274568392ddecf809e443443aead46",
+    "formula": "ncompress",
+    "components": [
+      "ncompress"
+    ]
+  },
+  {
+    "id": "coreutils",
+    "command": "coreutils",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "ca-certificates",
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "cp",
+    "command": "cp",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "curl",
+    "command": "curl",
+    "version": "8.23.0",
+    "license": "curl",
+    "source": "95b22eb32bf6d1fa6e3e9463bdb61cece3efc56d86576a9b3cbd428246a6d854",
+    "formula": "curl",
+    "components": [
+      "brotli",
+      "ca-certificates",
+      "curl",
+      "libnghttp2",
+      "libnghttp3",
+      "libngtcp2",
+      "libpsl",
+      "libssh2",
+      "openssl@4",
+      "zstd"
+    ]
+  },
+  {
+    "id": "cut",
+    "command": "cut",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "cwebp",
+    "command": "cwebp",
+    "version": "1.6.0",
+    "license": "BSD-3-Clause",
+    "source": "e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564",
+    "formula": "webp",
+    "components": [
+      "jpeg-turbo",
+      "libpng",
+      "webp"
+    ]
+  },
+  {
+    "id": "dasel",
+    "command": "dasel",
+    "version": "3.11.2",
+    "license": "MIT",
+    "source": "5471fe33b28c98efed2b1a13431ed24097785f56a24dc9fb15e37b1e266446e1",
+    "formula": "dasel",
+    "components": [
+      "dasel"
+    ]
+  },
+  {
+    "id": "date",
+    "command": "date",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "delta",
+    "command": "delta",
+    "version": "0.20.1",
+    "license": "MIT",
+    "source": "d9d502396e3595ee8fd926f1ed2e54ac9935baabd3569a3753efab36304f90fa",
+    "formula": "git-delta",
+    "components": [
+      "git-delta",
+      "libgit2",
+      "libssh2",
+      "llhttp",
+      "oniguruma",
+      "openssl@4"
+    ]
+  },
+  {
+    "id": "df",
+    "command": "df",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "diff",
+    "command": "diff",
+    "version": "3.12",
+    "license": "GPL-3.0-or-later",
+    "source": "7c8b7f9fc8609141fdea9cece85249d308624391ff61dedaf528fcb337727dfd",
+    "formula": "diffutils",
+    "components": [
+      "diffutils"
+    ]
+  },
+  {
+    "id": "diff3",
+    "command": "diff3",
+    "version": "3.12",
+    "license": "GPL-3.0-or-later",
+    "source": "7c8b7f9fc8609141fdea9cece85249d308624391ff61dedaf528fcb337727dfd",
+    "formula": "diffutils",
+    "components": [
+      "diffutils"
+    ]
+  },
+  {
+    "id": "difft",
+    "command": "difft",
+    "version": "0.72.0",
+    "license": "MIT",
+    "source": "ed8e2d59d44d62289b17c9d241e469bd72565fadf13c260676fc7a23bc28a844",
+    "formula": "difftastic",
+    "components": [
+      "difftastic"
+    ]
+  },
+  {
+    "id": "dirname",
+    "command": "dirname",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "dos2unix",
+    "command": "dos2unix",
+    "version": "7.5.7",
+    "license": "BSD-2-Clause",
+    "source": "669ee27120ae71589f638fe3a167d6ea54f8633f5ab1b282551bd7a7c9510dfa",
+    "formula": "dos2unix",
+    "components": [
+      "dos2unix"
+    ]
+  },
+  {
+    "id": "du",
+    "command": "du",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "dua",
+    "command": "dua",
+    "version": "3.0.3",
+    "license": "MIT",
+    "source": "e1918a15a39ec1f25a2f16f8395512b21025221ff9b0a5ba9bb8eb6b17a4178a",
+    "formula": "dua-cli",
+    "components": [
+      "dua-cli"
+    ]
+  },
+  {
+    "id": "duckdb",
+    "command": "duckdb",
+    "version": "2.0.0",
+    "license": "MIT",
+    "source": "93e3d1f9c84b6ec3493237d21565c01c2c19b9862e54e5552d3d7999ccc3bbb4",
+    "formula": "duckdb",
+    "components": [
+      "duckdb"
+    ]
+  },
+  {
+    "id": "duckdb-cli",
+    "command": "duckdb_cli",
+    "version": "2.0.0",
+    "license": "MIT",
+    "source": "93e3d1f9c84b6ec3493237d21565c01c2c19b9862e54e5552d3d7999ccc3bbb4",
+    "formula": "duckdb",
+    "components": [
+      "duckdb"
+    ]
+  },
+  {
+    "id": "duf",
+    "command": "duf",
+    "version": "0.9.1",
+    "license": "MIT",
+    "source": "1334d8c1a7957d0aceebe651e3af9e1c1e0c6f298f1feb39643dd0bd8ad1e955",
+    "formula": "duf",
+    "components": [
+      "duf"
+    ]
+  },
+  {
+    "id": "dust",
+    "command": "dust",
+    "version": "1.2.7",
+    "license": "Apache-2.0",
+    "source": "923a2eed637d2ea5f4ad5f820b6f87cc6e0081cfa4bc5ed1fe09278dd74db963",
+    "formula": "dust",
+    "components": [
+      "dust"
+    ]
+  },
+  {
+    "id": "dwebp",
+    "command": "dwebp",
+    "version": "1.6.0",
+    "license": "BSD-3-Clause",
+    "source": "e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564",
+    "formula": "webp",
+    "components": [
+      "jpeg-turbo",
+      "libpng",
+      "webp"
+    ]
+  },
+  {
+    "id": "echo",
+    "command": "echo",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "ed2k-link",
+    "command": "ed2k-link",
+    "version": "1.4.6",
+    "license": "0BSD",
+    "source": "9f6019cfeeae8ace7067ad22da4e4f857bb2cfa6c2deaa2258f55b2227ec937a",
+    "formula": "rhash",
+    "components": [
+      "rhash"
+    ]
+  },
+  {
+    "id": "edonr256-hash",
+    "command": "edonr256-hash",
+    "version": "1.4.6",
+    "license": "0BSD",
+    "source": "9f6019cfeeae8ace7067ad22da4e4f857bb2cfa6c2deaa2258f55b2227ec937a",
+    "formula": "rhash",
+    "components": [
+      "rhash"
+    ]
+  },
+  {
+    "id": "edonr512-hash",
+    "command": "edonr512-hash",
+    "version": "1.4.6",
+    "license": "0BSD",
+    "source": "9f6019cfeeae8ace7067ad22da4e4f857bb2cfa6c2deaa2258f55b2227ec937a",
+    "formula": "rhash",
+    "components": [
+      "rhash"
+    ]
+  },
+  {
+    "id": "env",
+    "command": "env",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "ca-certificates",
+      "coreutils"
+    ]
+  },
+  {
+    "id": "expand",
+    "command": "expand",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "expr",
+    "command": "expr",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils",
+      "gmp"
+    ]
+  },
+  {
+    "id": "eza",
+    "command": "eza",
+    "version": "0.23.5",
+    "license": "EUPL-1.2",
+    "source": "bbf179f2611c904014431740b559e8055276c12fcf978a7e31c271663548337f",
+    "formula": "eza",
+    "components": [
+      "eza",
+      "libgit2",
+      "libssh2",
+      "llhttp",
+      "openssl@4"
+    ]
+  },
+  {
+    "id": "false",
+    "command": "false",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "fclones",
+    "command": "fclones",
+    "version": "0.35.0",
+    "license": "MIT",
+    "source": "9d8bb36076190f799f01470f80e64c6a1f15f0d938793f8f607a2544cdd6115a",
+    "formula": "fclones",
+    "components": [
+      "fclones"
+    ]
+  },
+  {
+    "id": "fd",
+    "command": "fd",
+    "version": "10.5.2",
+    "license": "Apache-2.0 OR MIT",
+    "source": "8991b6504cac33c00528050622dfe3f2a0db1be1a6faf99f69b46d1a8f737dc5",
+    "formula": "fd",
+    "components": [
+      "fd"
+    ]
+  },
+  {
+    "id": "fdupes",
+    "command": "fdupes",
+    "version": "2.4.0",
+    "license": "MIT",
+    "source": "527b27a39d031dcbe1d29a220b3423228c28366c2412887eb72c25473d7b1736",
+    "formula": "fdupes",
+    "components": [
+      "fdupes",
+      "pcre2"
+    ]
+  },
+  {
+    "id": "ffmpeg",
+    "command": "ffmpeg",
+    "version": "9.0.2",
+    "license": "GPL-3.0-or-later",
+    "source": "8c3850283eb25fa026482078a04051e0be17347b09ef81a0849bec15a96e002e",
+    "formula": "ffmpeg",
+    "components": [
+      "ca-certificates",
+      "dav1d",
+      "ffmpeg",
+      "lame",
+      "libvmaf",
+      "libvpx",
+      "mpg123",
+      "openssl@4",
+      "opus",
+      "svt-av1",
+      "x264",
+      "x265",
+      "xz"
+    ]
+  },
+  {
+    "id": "ffprobe",
+    "command": "ffprobe",
+    "version": "9.0.2",
+    "license": "GPL-3.0-or-later",
+    "source": "8c3850283eb25fa026482078a04051e0be17347b09ef81a0849bec15a96e002e",
+    "formula": "ffmpeg",
+    "components": [
+      "ca-certificates",
+      "dav1d",
+      "ffmpeg",
+      "lame",
+      "libvmaf",
+      "libvpx",
+      "mpg123",
+      "openssl@4",
+      "opus",
+      "svt-av1",
+      "x264",
+      "x265",
+      "xz"
+    ]
+  },
+  {
+    "id": "file",
+    "command": "file",
+    "version": "5.48",
+    "license": "BSD-2-Clause-Darwin",
+    "source": "ed14656883b23a364b4057c05595d93252da9bc473d30106519519d0da141283",
+    "formula": "file-formula",
+    "components": [
+      "file-formula",
+      "libmagic"
+    ]
+  },
+  {
+    "id": "find",
+    "command": "find",
+    "version": "4.11.0",
+    "license": "GPL-3.0-or-later",
+    "source": "bfd19cb06cc71f3352d567e90284d8cdac02ac89774bbeadf0b533b0c11432fd",
+    "formula": "findutils",
+    "components": [
+      "ca-certificates",
+      "findutils"
+    ]
+  },
+  {
+    "id": "fix-qdf",
+    "command": "fix-qdf",
+    "version": "12.4.2",
+    "license": "Apache-2.0",
+    "source": "8a58af5b6141319287c1883bec8bd1bd545b7567b7fc5e6ce5d25a1c85f36397",
+    "formula": "qpdf",
+    "components": [
+      "jpeg-turbo",
+      "openssl@4",
+      "qpdf"
+    ]
+  },
+  {
+    "id": "flac",
+    "command": "flac",
+    "version": "1.5.0",
+    "license": "BSD-3-Clause AND GPL-2.0-or-later AND ISC AND LGPL-2.0-or-later AND LGPL-2.1-or-later AND LicenseRef-Homebrew-public-domain AND (GPL-2.0-or-later OR LGPL-2.1-or-later)",
+    "source": "f2c1c76592a82ffff8413ba3c4a1299b6c7ab06c734dee03fd88630485c2b920",
+    "formula": "flac",
+    "components": [
+      "flac",
+      "libogg"
+    ]
+  },
+  {
+    "id": "fmt",
+    "command": "fmt",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "fold",
+    "command": "fold",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "gh",
+    "command": "gh",
+    "version": "2.104.0",
+    "license": "MIT",
+    "source": "779060cbdc5a354fa2fc8afb56e9277f64a29ac599daefd941558356509081e4",
+    "formula": "gh",
+    "components": [
+      "ca-certificates",
+      "gh"
+    ]
+  },
+  {
+    "id": "gif2webp",
+    "command": "gif2webp",
+    "version": "1.6.0",
+    "license": "BSD-3-Clause",
+    "source": "e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564",
+    "formula": "webp",
+    "components": [
+      "giflib",
+      "webp"
+    ]
+  },
+  {
+    "id": "git-client",
+    "command": "git",
+    "version": "2.56.1",
+    "license": "GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.1-or-later AND BSD-3-Clause AND MIT",
+    "source": "f0b0bf89264b9bd2e1c640363e7529643989da76281600473c50745cd34a607f",
+    "formula": "git",
+    "components": [
+      "ca-certificates",
+      "gettext",
+      "git",
+      "pcre2"
+    ]
+  },
+  {
+    "id": "git-https",
+    "command": "git-remote-https",
+    "version": "2.56.1",
+    "license": "GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.1-or-later AND BSD-3-Clause AND MIT",
+    "source": "f0b0bf89264b9bd2e1c640363e7529643989da76281600473c50745cd34a607f",
+    "formula": "git",
+    "components": [
+      "ca-certificates",
+      "gettext",
+      "git",
+      "pcre2"
+    ],
+    "transportFor": [
+      "gh",
+      "glab",
+      "git-client"
+    ]
+  },
+  {
+    "id": "glab",
+    "command": "glab",
+    "version": "1.130.0",
+    "license": "MIT",
+    "source": "fb0d1f5c81928e90ad5071c32cd05beb7b34df7521fc9329c774fc8584c1e174",
+    "formula": "glab",
+    "components": [
+      "ca-certificates",
+      "glab"
+    ]
+  },
+  {
+    "id": "gost12-256-hash",
+    "command": "gost12-256-hash",
+    "version": "1.4.6",
+    "license": "0BSD",
+    "source": "9f6019cfeeae8ace7067ad22da4e4f857bb2cfa6c2deaa2258f55b2227ec937a",
+    "formula": "rhash",
+    "components": [
+      "rhash"
+    ]
+  },
+  {
+    "id": "gost12-512-hash",
+    "command": "gost12-512-hash",
+    "version": "1.4.6",
+    "license": "0BSD",
+    "source": "9f6019cfeeae8ace7067ad22da4e4f857bb2cfa6c2deaa2258f55b2227ec937a",
+    "formula": "rhash",
+    "components": [
+      "rhash"
+    ]
+  },
+  {
+    "id": "grep",
+    "command": "grep",
+    "version": "3.12",
+    "license": "GPL-3.0-or-later",
+    "source": "2649b27c0e90e632eadcd757be06c6e9a4f48d941de51e7c0f83ff76408a07b9",
+    "formula": "grep",
+    "components": [
+      "grep",
+      "pcre2"
+    ]
+  },
+  {
+    "id": "grex",
+    "command": "grex",
+    "version": "1.4.6",
+    "license": "Apache-2.0",
+    "source": "2ab9cb4c3d921711f23ea33a9e60dc11e9eaab450b16d1f2247bea2276822433",
+    "formula": "grex",
+    "components": [
+      "grex"
+    ]
+  },
+  {
+    "id": "gron",
+    "command": "gron",
+    "version": "0.7.1",
+    "license": "MIT",
+    "source": "1c98f2ef2ba03558864b1ab5e9c4b47a2e89d3ffaf24cfa0ac75cd38d775feb4",
+    "formula": "gron",
+    "components": [
+      "ca-certificates",
+      "gron"
+    ]
+  },
+  {
+    "id": "grpcurl",
+    "command": "grpcurl",
+    "version": "1.9.4",
+    "license": "MIT",
+    "source": "bea899ba2f483a951bf40aa05d41e069dd2f7bfe52d2a229717abfdb5620cb7c",
+    "formula": "grpcurl",
+    "components": [
+      "ca-certificates",
+      "grpcurl"
+    ]
+  },
+  {
+    "id": "gunzip",
+    "command": "gunzip",
+    "version": "1.15",
+    "license": "GPL-3.0-or-later",
+    "source": "545886cf57fa88a65e967fbf705903d7fcb2567c82c7342493e82e8d7b1a210b",
+    "formula": "gzip",
+    "components": [
+      "gzip"
+    ]
+  },
+  {
+    "id": "gzcat",
+    "command": "gzcat",
+    "version": "1.15",
+    "license": "GPL-3.0-or-later",
+    "source": "545886cf57fa88a65e967fbf705903d7fcb2567c82c7342493e82e8d7b1a210b",
+    "formula": "gzip",
+    "components": [
+      "gzip"
+    ]
+  },
+  {
+    "id": "gzip",
+    "command": "gzip",
+    "version": "1.15",
+    "license": "GPL-3.0-or-later",
+    "source": "545886cf57fa88a65e967fbf705903d7fcb2567c82c7342493e82e8d7b1a210b",
+    "formula": "gzip",
+    "components": [
+      "gzip"
+    ]
+  },
+  {
+    "id": "has160-hash",
+    "command": "has160-hash",
+    "version": "1.4.6",
+    "license": "0BSD",
+    "source": "9f6019cfeeae8ace7067ad22da4e4f857bb2cfa6c2deaa2258f55b2227ec937a",
+    "formula": "rhash",
+    "components": [
+      "rhash"
+    ]
+  },
+  {
+    "id": "head",
+    "command": "head",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "helm",
+    "command": "helm",
+    "version": "4.3.2",
+    "license": "Apache-2.0",
+    "source": "a8925a161c568522f6f4ca778446c06152e968c31e7f64bab8423de03f2e6cba",
+    "formula": "helm",
+    "components": [
+      "ca-certificates",
+      "helm"
+    ]
+  },
+  {
+    "id": "hexdump",
+    "command": "hexdump",
+    "version": "2.42.4",
+    "license": "BSD-3-Clause AND BSD-4-Clause-UC AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-or-later AND LGPL-2.1-or-later AND LicenseRef-Homebrew-public-domain",
+    "source": "fbd62a100ab7bb8746ba0661255c3c48185b1e9021507c624da01fbc696330ec",
+    "formula": "util-linux",
+    "components": [
+      "gettext",
+      "util-linux"
+    ]
+  },
+  {
+    "id": "hexedit",
+    "command": "hexedit",
+    "version": "1.6",
+    "license": "GPL-2.0-or-later",
+    "source": "598906131934f88003a6a937fab10542686ce5f661134bc336053e978c4baae3",
+    "formula": "hexedit",
+    "components": [
+      "hexedit"
+    ]
+  },
+  {
+    "id": "hexyl",
+    "command": "hexyl",
+    "version": "0.17.0",
+    "license": "Apache-2.0 OR MIT",
+    "source": "72fa17397ad187eec6b295d02c7caabbb209a6e0d5706187b8a599bd5df8615e",
+    "formula": "hexyl",
+    "components": [
+      "hexyl"
+    ]
+  },
+  {
+    "id": "hurl",
+    "command": "hurl",
+    "version": "8.1.0",
+    "license": "Apache-2.0",
+    "source": "2e45678806a8a1c7307d4b4298b11aab6d947799bdce986c67fd9c693dac98a5",
+    "formula": "hurl",
+    "components": [
+      "ca-certificates",
+      "hurl"
+    ]
+  },
+  {
+    "id": "hurlfmt",
+    "command": "hurlfmt",
+    "version": "8.1.0",
+    "license": "Apache-2.0",
+    "source": "2e45678806a8a1c7307d4b4298b11aab6d947799bdce986c67fd9c693dac98a5",
+    "formula": "hurl",
+    "components": [
+      "hurl"
+    ]
+  },
+  {
+    "id": "hyperfine",
+    "command": "hyperfine",
+    "version": "2.0.0",
+    "license": "Apache-2.0 OR MIT",
+    "source": "f4b71df3c78e4cf752ca6fb6ebc4b025f7ea6a5ca5c48fea75f8a1fdb4c7d721",
+    "formula": "hyperfine",
+    "components": [
+      "hyperfine"
+    ]
+  },
+  {
+    "id": "iconv",
+    "command": "iconv",
+    "version": "1.19.1",
+    "license": "GPL-3.0-or-later AND LGPL-2.0-or-later",
+    "source": "9a06844846d664d7122161700c10a64480d7c7bcead3091925a785b38c91edab",
+    "formula": "libiconv",
+    "components": [
+      "libiconv"
+    ]
+  },
+  {
+    "id": "img2webp",
+    "command": "img2webp",
+    "version": "1.6.0",
+    "license": "BSD-3-Clause",
+    "source": "e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564",
+    "formula": "webp",
+    "components": [
+      "jpeg-turbo",
+      "libpng",
+      "webp"
+    ]
+  },
+  {
+    "id": "innoextract",
+    "command": "innoextract",
+    "version": "1.9",
+    "license": "Zlib",
+    "source": "6344a69fc1ed847d4ed3e272e0da5998948c6b828cb7af39c6321aba6cf88126",
+    "formula": "innoextract",
+    "components": [
+      "boost",
+      "innoextract",
+      "xz",
+      "zstd"
+    ]
+  },
+  {
+    "id": "jaq",
+    "command": "jaq",
+    "version": "3.1.2",
+    "license": "MIT",
+    "source": "54ac66fac30a1d28c54f19716215cf4256877c69964c1c0150c3976bde618b93",
+    "formula": "jaq",
+    "components": [
+      "jaq"
+    ]
+  },
+  {
+    "id": "jdupes",
+    "command": "jdupes",
+    "version": "1.31.3",
+    "license": "MIT",
+    "source": "3f76188082330cc28d37788377f0ed06b0ba181fcd4d88827a59f26a0c396168",
+    "formula": "jdupes",
+    "components": [
+      "jdupes",
+      "libjodycode"
+    ]
+  },
+  {
+    "id": "join",
+    "command": "join",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "jpegoptim",
+    "command": "jpegoptim",
+    "version": "1.5.6",
+    "license": "GPL-3.0-or-later",
+    "source": "661a808dfffa933d78c6beb47a2937d572b9f03e94cbaaab3d4c0d72f410e9be",
+    "formula": "jpegoptim",
+    "components": [
+      "jpeg-turbo",
+      "jpegoptim"
+    ]
+  },
+  {
+    "id": "jq",
+    "command": "jq",
+    "version": "1.8.2",
+    "license": "MIT",
+    "source": "71b8d6e8f5fe81f6c6d0d110e3892251f6ce76ed095abd315e26e6e1193af3af",
+    "formula": "jq",
+    "components": [
+      "jq",
+      "oniguruma"
+    ]
+  },
+  {
+    "id": "jsonnet",
+    "command": "jsonnet",
+    "version": "0.22.0",
+    "license": "Apache-2.0",
+    "source": "5914b9904d97efa662d919519cef1a14e4132bfddddaeed8b061b4a8af628f8d",
+    "formula": "jsonnet",
+    "components": [
+      "jsonnet"
+    ]
+  },
+  {
+    "id": "jsonnetfmt",
+    "command": "jsonnetfmt",
+    "version": "0.22.0",
+    "license": "Apache-2.0",
+    "source": "5914b9904d97efa662d919519cef1a14e4132bfddddaeed8b061b4a8af628f8d",
+    "formula": "jsonnet",
+    "components": [
+      "jsonnet"
+    ]
+  },
+  {
+    "id": "jwt",
+    "command": "jwt",
+    "version": "6.2.0",
+    "license": "MIT",
+    "source": "49d67d920391978684dc32b75e553a2abbd46c775365c0fb4b232d22c0ed653a",
+    "formula": "jwt-cli",
+    "components": [
+      "jwt-cli"
+    ]
+  },
+  {
+    "id": "kubeconform",
+    "command": "kubeconform",
+    "version": "0.8.0",
+    "license": "Apache-2.0",
+    "source": "c345de9c3207f2d24628c64fe3cb9bed55c4248b12c181efe81ee907d6c994f2",
+    "formula": "kubeconform",
+    "components": [
+      "ca-certificates",
+      "kubeconform"
+    ]
+  },
+  {
+    "id": "kubectl",
+    "command": "kubectl",
+    "version": "1.37.2",
+    "license": "Apache-2.0",
+    "source": "98bba0e23e7c6b6d48947b1c8ea27d454d37797402b9f874b78a397c83c7a0de",
+    "formula": "kubernetes-cli",
+    "components": [
+      "ca-certificates",
+      "kubernetes-cli"
+    ]
+  },
+  {
+    "id": "kustomize",
+    "command": "kustomize",
+    "version": "5.8.3",
+    "license": "Apache-2.0",
+    "source": "c823ae7b7e1461d82dfe7e592823796c6a98d9633cdbe33c64508b65c9911a57",
+    "formula": "kustomize",
+    "components": [
+      "ca-certificates",
+      "kustomize"
+    ]
+  },
+  {
+    "id": "ln",
+    "command": "ln",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "lowdown",
+    "command": "lowdown",
+    "version": "3.2.1",
+    "license": "ISC",
+    "source": "664afc7c00aadbaf16cdcf7dc464e64b529f432eba9dffc950acb0d55d1be90d",
+    "formula": "lowdown",
+    "components": [
+      "lowdown"
+    ]
+  },
+  {
+    "id": "lowdown-diff",
+    "command": "lowdown-diff",
+    "version": "3.2.1",
+    "license": "ISC",
+    "source": "664afc7c00aadbaf16cdcf7dc464e64b529f432eba9dffc950acb0d55d1be90d",
+    "formula": "lowdown",
+    "components": [
+      "lowdown"
+    ]
+  },
+  {
+    "id": "ls",
+    "command": "ls",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "lsd",
+    "command": "lsd",
+    "version": "1.2.0",
+    "license": "Apache-2.0",
+    "source": "dae8d43087686a4a1de0584922608e9cbab00727d0f72e4aa487860a9cbfeefa",
+    "formula": "lsd",
+    "components": [
+      "lsd"
+    ]
+  },
+  {
+    "id": "lz4",
+    "command": "lz4",
+    "version": "1.11.1",
+    "license": "BSD-2-Clause",
+    "source": "683fed08a844ad012196381e40badf80c0bbe4962959761416d41c9e67d77ec7",
+    "formula": "lz4",
+    "components": [
+      "lz4"
+    ]
+  },
+  {
+    "id": "lz4c",
+    "command": "lz4c",
+    "version": "1.11.1",
+    "license": "BSD-2-Clause",
+    "source": "683fed08a844ad012196381e40badf80c0bbe4962959761416d41c9e67d77ec7",
+    "formula": "lz4",
+    "components": [
+      "lz4"
+    ]
+  },
+  {
+    "id": "lz4cat",
+    "command": "lz4cat",
+    "version": "1.11.1",
+    "license": "BSD-2-Clause",
+    "source": "683fed08a844ad012196381e40badf80c0bbe4962959761416d41c9e67d77ec7",
+    "formula": "lz4",
+    "components": [
+      "lz4"
+    ]
+  },
+  {
+    "id": "lzcat",
+    "command": "lzcat",
+    "version": "5.8.4",
+    "license": "0BSD AND GPL-2.0-or-later",
+    "source": "0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9",
+    "formula": "xz",
+    "components": [
+      "xz"
+    ]
+  },
+  {
+    "id": "lzma",
+    "command": "lzma",
+    "version": "5.8.4",
+    "license": "0BSD AND GPL-2.0-or-later",
+    "source": "0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9",
+    "formula": "xz",
+    "components": [
+      "xz"
+    ]
+  },
+  {
+    "id": "lzmadec",
+    "command": "lzmadec",
+    "version": "5.8.4",
+    "license": "0BSD AND GPL-2.0-or-later",
+    "source": "0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9",
+    "formula": "xz",
+    "components": [
+      "xz"
+    ]
+  },
+  {
+    "id": "lzmainfo",
+    "command": "lzmainfo",
+    "version": "5.8.4",
+    "license": "0BSD AND GPL-2.0-or-later",
+    "source": "0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9",
+    "formula": "xz",
+    "components": [
+      "xz"
+    ]
+  },
+  {
+    "id": "mac2unix",
+    "command": "mac2unix",
+    "version": "7.5.7",
+    "license": "BSD-2-Clause",
+    "source": "669ee27120ae71589f638fe3a167d6ea54f8633f5ab1b282551bd7a7c9510dfa",
+    "formula": "dos2unix",
+    "components": [
+      "dos2unix"
+    ]
+  },
+  {
+    "id": "magnet-link",
+    "command": "magnet-link",
+    "version": "1.4.6",
+    "license": "0BSD",
+    "source": "9f6019cfeeae8ace7067ad22da4e4f857bb2cfa6c2deaa2258f55b2227ec937a",
+    "formula": "rhash",
+    "components": [
+      "rhash"
+    ]
+  },
+  {
+    "id": "mandoc",
+    "command": "mandoc",
+    "version": "1.14.6",
+    "license": "ISC",
+    "source": "8bf0d570f01e70a6e124884088870cbed7537f36328d512909eb10cd53179d9c",
+    "formula": "mandoc",
+    "components": [
+      "mandoc"
+    ]
+  },
+  {
+    "id": "mc",
+    "command": "mc",
+    "version": "4.8.33",
+    "license": "GPL-3.0-or-later",
+    "source": "cae149d42f844e5185d8c81d7db3913a8fa214c65f852200a9d896b468af164c",
+    "build": {
+      "recipe": "mc",
+      "dependencies": [
+        "glib",
+        "pcre2",
+        "proxy-libintl",
+        "slang"
+      ],
+      "patches": [
+        {
+          "path": "Tools/mc/patches/0001-relocatable-data.patch",
+          "sha256": "9eeaa6d6fa0d6839d369313f132ecc6a980ceafca7e725f0d17b2df920f70dbf"
+        },
+        {
+          "path": "Tools/mc/patches/0002-sftp-configured-home.patch",
+          "sha256": "79b470c8abbcd5d3256537ee6cfa5b9b150d7832c4626980cd4cb01af13542b2"
+        }
+      ],
+      "staticBottles": [
+        "libssh2",
+        "openssl@4"
+      ]
+    }
+  },
+  {
+    "id": "md2html",
+    "command": "md2html",
+    "version": "0.6.0",
+    "license": "MIT",
+    "source": "4d151298125a81da3b2efa2e0eed8bdb7a9318569804e4fa4d7a2375ab83ef70",
+    "formula": "md4c",
+    "components": [
+      "md4c"
+    ]
+  },
+  {
+    "id": "mediainfo",
+    "command": "mediainfo",
+    "version": "26.10",
+    "license": "BSD-2-Clause",
+    "source": "82f6bce8e58818509022f0bbcc87fce0c6da21822fb2a2a9573b5e3950d8e5f6",
+    "formula": "media-info",
+    "components": [
+      "libmediainfo",
+      "libzen",
+      "media-info"
+    ]
+  },
+  {
+    "id": "metaflac",
+    "command": "metaflac",
+    "version": "1.5.0",
+    "license": "BSD-3-Clause AND GPL-2.0-or-later AND ISC AND LGPL-2.0-or-later AND LGPL-2.1-or-later AND LicenseRef-Homebrew-public-domain AND (GPL-2.0-or-later OR LGPL-2.1-or-later)",
+    "source": "f2c1c76592a82ffff8413ba3c4a1299b6c7ab06c734dee03fd88630485c2b920",
+    "formula": "flac",
+    "components": [
+      "flac",
+      "libogg"
+    ]
+  },
+  {
+    "id": "minisign",
+    "command": "minisign",
+    "version": "0.12",
+    "license": "ISC",
+    "source": "796dce1376f9bcb1a19ece729c075c47054364355fe0c0c1ebe5104d508c7db0",
+    "formula": "minisign",
+    "components": [
+      "libsodium",
+      "minisign"
+    ]
+  },
+  {
+    "id": "mkdir",
+    "command": "mkdir",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "mktemp",
+    "command": "mktemp",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "mlr",
+    "command": "mlr",
+    "version": "6.22.0",
+    "license": "BSD-2-Clause",
+    "source": "a6fba59814a49821896be2096aab80eb4818eb26fd2bfce72a231623be38b246",
+    "formula": "miller",
+    "components": [
+      "miller"
+    ]
+  },
+  {
+    "id": "mv",
+    "command": "mv",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "ncdu",
+    "command": "ncdu",
+    "version": "2.9.2",
+    "license": "MIT",
+    "source": "e91135281cb66569f2ca4c0bac277246991e7e52524c0ca8cba3de5c8e81cec9",
+    "formula": "ncdu",
+    "components": [
+      "ncdu",
+      "ncurses",
+      "zstd"
+    ]
+  },
+  {
+    "id": "nl",
+    "command": "nl",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "od",
+    "command": "od",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "optipng",
+    "command": "optipng",
+    "version": "7.9.1",
+    "license": "Zlib",
+    "source": "c2579be58c2c66dae9d63154edcb3d427fef64cb00ec0aff079c9d156ec46f29",
+    "formula": "optipng",
+    "components": [
+      "libpng",
+      "optipng"
+    ]
+  },
+  {
+    "id": "oxipng",
+    "command": "oxipng",
+    "version": "10.2.1",
+    "license": "MIT",
+    "source": "460ccfcdcc9c3877b9f7fae1dfd4f2a3f93d3b2a2af3e3b62ca32b163f923cca",
+    "formula": "oxipng",
+    "components": [
+      "oxipng"
+    ]
+  },
+  {
+    "id": "pandoc",
+    "command": "pandoc",
+    "version": "3.14",
+    "license": "GPL-2.0-or-later",
+    "source": "e4c4292642531b94793c2f5dea38f3b8d5424b2d048818a4d047f8b8320b999a",
+    "formula": "pandoc",
+    "components": [
+      "ca-certificates",
+      "gmp",
+      "pandoc"
+    ]
+  },
+  {
+    "id": "paste",
+    "command": "paste",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "patch",
+    "command": "patch",
+    "version": "2.8.1",
+    "license": "GPL-3.0-or-later",
+    "source": "3240c7959c5347c8ed347e3c4201c0337bf4240d5cf09d68889e58eeaba30e17",
+    "formula": "gpatch",
+    "components": [
+      "gpatch"
+    ]
+  },
+  {
+    "id": "pigz",
+    "command": "pigz",
+    "version": "2.8",
+    "license": "Zlib",
+    "source": "eb872b4f0e1f0ebe59c9f7bd8c506c4204893ba6a8492de31df416f0d5170fd0",
+    "formula": "pigz",
+    "components": [
+      "pigz"
+    ]
+  },
+  {
+    "id": "pngcheck",
+    "command": "pngcheck",
+    "version": "4.0.1",
+    "license": "HPND",
+    "source": "a24ac2348efca5895e9d6f53fd316f3d5c409ab92a74b2b8106541759304da53",
+    "formula": "pngcheck",
+    "components": [
+      "pngcheck"
+    ]
+  },
+  {
+    "id": "printf",
+    "command": "printf",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "pup",
+    "command": "pup",
+    "version": "2.5.0",
+    "license": "Apache-2.0",
+    "source": "03a7a6579f367392d2eca4fb89babf94e25b0d5ed25989957078ad67e8176098",
+    "formula": "pup",
+    "components": [
+      "ca-certificates",
+      "pup"
+    ]
+  },
+  {
+    "id": "pv",
+    "command": "pv",
+    "version": "1.12.7",
+    "license": "Artistic-2.0",
+    "source": "5326ed7ee95ef18039390c0b17891ac28985ac7c7a4235070fab767c1fe37bd8",
+    "formula": "pv",
+    "components": [
+      "gettext",
+      "pv"
+    ]
+  },
+  {
+    "id": "pwd",
+    "command": "pwd",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "pzstd",
+    "command": "pzstd",
+    "version": "1.5.7",
+    "license": "(BSD-3-Clause OR GPL-2.0-only) AND BSD-2-Clause AND MIT",
+    "source": "37d7284556b20954e56e1ca85b80226768902e2edabd3b649e9e72c0c9012ee3",
+    "formula": "zstd",
+    "components": [
+      "zstd"
+    ]
+  },
+  {
+    "id": "qpdf",
+    "command": "qpdf",
+    "version": "12.4.2",
+    "license": "Apache-2.0",
+    "source": "8a58af5b6141319287c1883bec8bd1bd545b7567b7fc5e6ce5d25a1c85f36397",
+    "formula": "qpdf",
+    "components": [
+      "jpeg-turbo",
+      "openssl@4",
+      "qpdf"
+    ]
+  },
+  {
+    "id": "qrencode",
+    "command": "qrencode",
+    "version": "4.1.1",
+    "license": "LGPL-2.1-or-later",
+    "source": "5385bc1b8c2f20f3b91d258bf8ccc8cf62023935df2d2676b5b67049f31a049c",
+    "formula": "qrencode",
+    "components": [
+      "libpng",
+      "qrencode"
+    ]
+  },
+  {
+    "id": "qsv",
+    "command": "qsv",
+    "version": "29.0.0",
+    "license": "MIT OR Unlicense",
+    "source": "0220154ed1ef58e0124f47cd96f9c6dfe00ab133f8a187c9eaec9e3258000693",
+    "formula": "qsv",
+    "components": [
+      "ca-certificates",
+      "qsv"
+    ]
+  },
+  {
+    "id": "qt-faststart",
+    "command": "qt-faststart",
+    "version": "9.0.2",
+    "license": "GPL-3.0-or-later",
+    "source": "8c3850283eb25fa026482078a04051e0be17347b09ef81a0849bec15a96e002e",
+    "formula": "ffmpeg",
+    "components": [
+      "ffmpeg"
+    ]
+  },
+  {
+    "id": "rclone",
+    "command": "rclone",
+    "version": "1.76.0",
+    "license": "MIT",
+    "source": "8cb7e5d576fe9a3aef8b1a0785e2ffc6c1953f8ed109f42000b0b86718f6628b",
+    "formula": "rclone",
+    "components": [
+      "ca-certificates",
+      "rclone"
+    ]
+  },
+  {
+    "id": "rdfind",
+    "command": "rdfind",
+    "version": "1.8.0",
+    "license": "GPL-2.0-or-later",
+    "source": "0a2d0d32002cc2dc0134ee7b649bcc811ecfb2f8d9f672aa476a851152e7af35",
+    "formula": "rdfind",
+    "components": [
+      "nettle",
+      "rdfind"
+    ]
+  },
+  {
+    "id": "readlink",
+    "command": "readlink",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "restic",
+    "command": "restic",
+    "version": "0.19.1",
+    "license": "BSD-2-Clause",
+    "source": "bb9b1a19040744d26d8a79be029d4e6b189c45ccc9d8831d7fe367d3c33df725",
+    "formula": "restic",
+    "components": [
+      "ca-certificates",
+      "restic"
+    ]
+  },
+  {
+    "id": "rev",
+    "command": "rev",
+    "version": "2.42.4",
+    "license": "BSD-3-Clause AND BSD-4-Clause-UC AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-or-later AND LGPL-2.1-or-later AND LicenseRef-Homebrew-public-domain",
+    "source": "fbd62a100ab7bb8746ba0661255c3c48185b1e9021507c624da01fbc696330ec",
+    "formula": "util-linux",
+    "components": [
+      "gettext",
+      "util-linux"
+    ]
+  },
+  {
+    "id": "rg",
+    "command": "rg",
+    "version": "15.2.0",
+    "license": "Unlicense",
+    "source": "7605249d3eb0d5f170e3414498e3344e26b1e7a147aec518b57090b80036a562",
+    "formula": "ripgrep",
+    "components": [
+      "pcre2",
+      "ripgrep"
+    ]
+  },
+  {
+    "id": "rhash",
+    "command": "rhash",
+    "version": "1.4.6",
+    "license": "0BSD",
+    "source": "9f6019cfeeae8ace7067ad22da4e4f857bb2cfa6c2deaa2258f55b2227ec937a",
+    "formula": "rhash",
+    "components": [
+      "rhash"
+    ]
+  },
+  {
+    "id": "rm",
+    "command": "rm",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "rmdir",
+    "command": "rmdir",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "rsync",
+    "command": "rsync",
+    "version": "3.5.2",
+    "license": "GPL-3.0-or-later",
+    "source": "a10d591825251e070f74c98df3daad195def4ed81b4a2de16169026aea33f6c8",
+    "formula": "rsync",
+    "components": [
+      "ca-certificates",
+      "gettext",
+      "libidn2",
+      "libunistring",
+      "lz4",
+      "openssl@4",
+      "popt",
+      "rsync",
+      "xxhash",
+      "zstd"
+    ]
+  },
+  {
+    "id": "rsync-ssh",
+    "command": "ssh",
+    "version": "10.6p2",
+    "license": "SSH-OpenSSH",
+    "source": "9ae44872090cf2f06b3cf9ff147e7f16f309671340763ed2f99248398ae29d5b",
+    "formula": "openssh",
+    "components": [
+      "ca-certificates",
+      "ldns",
+      "openssh",
+      "openssl@4"
+    ],
+    "transportFor": [
+      "rsync",
+      "restic",
+      "git-client"
+    ]
+  },
+  {
+    "id": "ruff",
+    "command": "ruff",
+    "version": "0.17.5",
+    "license": "MIT",
+    "source": "3d920afb666d51ebec3c80ec2847ae7ad14cca3badaaf39f1c0a175d100a4506",
+    "formula": "ruff",
+    "components": [
+      "ruff"
+    ]
+  },
+  {
+    "id": "scc",
+    "command": "scc",
+    "version": "4.1.0",
+    "license": "MIT OR Unlicense",
+    "source": "4f3cf36010c542b10d5582afb91c668b26889160b184deee21b4319347030a7c",
+    "formula": "scc",
+    "components": [
+      "scc"
+    ]
+  },
+  {
+    "id": "sd",
+    "command": "sd",
+    "version": "1.1.0",
+    "license": "MIT",
+    "source": "defdce484f8c92f265e1282490572575028967c2c55d356111d1e49a3ea9a88e",
+    "formula": "sd",
+    "components": [
+      "sd"
+    ]
+  },
+  {
+    "id": "sdiff",
+    "command": "sdiff",
+    "version": "3.12",
+    "license": "GPL-3.0-or-later",
+    "source": "7c8b7f9fc8609141fdea9cece85249d308624391ff61dedaf528fcb337727dfd",
+    "formula": "diffutils",
+    "components": [
+      "diffutils"
+    ]
+  },
+  {
+    "id": "sed",
+    "command": "sed",
+    "version": "4.10",
+    "license": "GPL-3.0-or-later",
+    "source": "b8e72182b2ec96a3574e2998c47b7aaa64cc20ce000d8e9ac313cc07cecf28c7",
+    "formula": "gnu-sed",
+    "components": [
+      "gnu-sed"
+    ]
+  },
+  {
+    "id": "seq",
+    "command": "seq",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "sfv-hash",
+    "command": "sfv-hash",
+    "version": "1.4.6",
+    "license": "0BSD",
+    "source": "9f6019cfeeae8ace7067ad22da4e4f857bb2cfa6c2deaa2258f55b2227ec937a",
+    "formula": "rhash",
+    "components": [
+      "rhash"
+    ]
+  },
+  {
+    "id": "shellcheck",
+    "command": "shellcheck",
+    "version": "0.11.0",
+    "license": "GPL-3.0-or-later",
+    "source": "8b07554f92e4fbfc33f1539a1f475f21c6503ceae8f806efcc518b1f529f7102",
+    "formula": "shellcheck",
+    "components": [
+      "gmp",
+      "shellcheck"
+    ]
+  },
+  {
+    "id": "shfmt",
+    "command": "shfmt",
+    "version": "3.14.1",
+    "license": "BSD-3-Clause",
+    "source": "ec4bdb88ab6c95686be3a4eeb4ad77d2b49d33d2ed7b0a65035cd52d2d87c443",
+    "formula": "shfmt",
+    "components": [
+      "shfmt"
+    ]
+  },
+  {
+    "id": "sleep",
+    "command": "sleep",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "sort",
+    "command": "sort",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils",
+      "openssl@4"
+    ]
+  },
+  {
+    "id": "sox",
+    "command": "sox",
+    "version": "14.4.2",
+    "license": "GPL-2.0-or-later AND LGPL-2.1-or-later",
+    "source": "b45f598643ffbd8e363ff24d61166ccec4836fea6d3888881b8df53e3bb55f6c",
+    "formula": "sox",
+    "components": [
+      "flac",
+      "lame",
+      "libogg",
+      "libpng",
+      "libsndfile",
+      "libvorbis",
+      "mad",
+      "mpg123",
+      "opus",
+      "opusfile",
+      "sox"
+    ]
+  },
+  {
+    "id": "soxi",
+    "command": "soxi",
+    "version": "14.4.2",
+    "license": "GPL-2.0-or-later AND LGPL-2.1-or-later",
+    "source": "b45f598643ffbd8e363ff24d61166ccec4836fea6d3888881b8df53e3bb55f6c",
+    "formula": "sox",
+    "components": [
+      "flac",
+      "lame",
+      "libogg",
+      "libpng",
+      "libsndfile",
+      "libvorbis",
+      "mad",
+      "mpg123",
+      "opus",
+      "opusfile",
+      "sox"
+    ]
+  },
+  {
+    "id": "split",
+    "command": "split",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "sqlite3",
+    "command": "sqlite3",
+    "version": "3.54.1",
+    "license": "blessing",
+    "source": "926ef8d3eab93fbf6e06011901273eec076b25594a4e1cdadd50c987f4f6d64e",
+    "formula": "sqlite",
+    "components": [
+      "readline",
+      "sqlite"
+    ]
+  },
+  {
+    "id": "stat",
+    "command": "stat",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "tail",
+    "command": "tail",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "tar",
+    "command": "tar",
+    "version": "1.35",
+    "license": "GPL-3.0-or-later",
+    "source": "14d55e32063ea9526e057fbf35fcabd53378e769787eff7919c3755b02d2b57e",
+    "formula": "gnu-tar",
+    "components": [
+      "gnu-tar"
+    ]
+  },
+  {
+    "id": "tcping",
+    "command": "tcping",
+    "version": "2.1.0",
+    "license": "MIT",
+    "source": "b8aa427420fe00173b5a2c0013d78e52b010350f5438bf5903c1942cba7c39c9",
+    "formula": "tcping",
+    "components": [
+      "ca-certificates",
+      "tcping"
+    ]
+  },
+  {
+    "id": "tee",
+    "command": "tee",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "tidy",
+    "command": "tidy",
+    "version": "5.8.0",
+    "license": "Zlib",
+    "source": "59c86d5b2e452f63c5cdb29c866a12a4c55b1741d7025cf2f3ce0cde99b0660e",
+    "formula": "tidy-html5",
+    "components": [
+      "tidy-html5"
+    ]
+  },
+  {
+    "id": "tiger-hash",
+    "command": "tiger-hash",
+    "version": "1.4.6",
+    "license": "0BSD",
+    "source": "9f6019cfeeae8ace7067ad22da4e4f857bb2cfa6c2deaa2258f55b2227ec937a",
+    "formula": "rhash",
+    "components": [
+      "rhash"
+    ]
+  },
+  {
+    "id": "tokei",
+    "command": "tokei",
+    "version": "15.0.0",
+    "license": "Apache-2.0 OR MIT",
+    "source": "966da7b9a81ac6cb777b9f159f4c02e5b83a8b8bd30ebf5991007839926b600c",
+    "formula": "tokei",
+    "components": [
+      "tokei"
+    ]
+  },
+  {
+    "id": "touch",
+    "command": "touch",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "tr",
+    "command": "tr",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "tree",
+    "command": "tree",
+    "version": "2.3.2",
+    "license": "GPL-2.0-or-later",
+    "source": "22cf32e84e3eb508d97a9e991c2c3cc006b9dcf4afed201d96311c5c57d08fcf",
+    "formula": "tree",
+    "components": [
+      "tree"
+    ]
+  },
+  {
+    "id": "true",
+    "command": "true",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "truncate",
+    "command": "truncate",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "tth-hash",
+    "command": "tth-hash",
+    "version": "1.4.6",
+    "license": "0BSD",
+    "source": "9f6019cfeeae8ace7067ad22da4e4f857bb2cfa6c2deaa2258f55b2227ec937a",
+    "formula": "rhash",
+    "components": [
+      "rhash"
+    ]
+  },
+  {
+    "id": "typos",
+    "command": "typos",
+    "version": "1.52.2",
+    "license": "Apache-2.0 OR MIT",
+    "source": "72d8b9ab9cc54512865f51d8ff65903532785b1c32d58fc4e179ddf89299c5be",
+    "formula": "typos-cli",
+    "components": [
+      "typos-cli"
+    ]
+  },
+  {
+    "id": "ug",
+    "command": "ug",
+    "version": "7.8.5",
+    "license": "BSD-3-Clause",
+    "source": "f080ab6cd9d96a5357570cb60a99e09ebe5eef11cf322c35373dbe815378a1f2",
+    "formula": "ugrep",
+    "components": [
+      "brotli",
+      "lz4",
+      "pcre2",
+      "ugrep",
+      "xz",
+      "zstd"
+    ]
+  },
+  {
+    "id": "ugrep",
+    "command": "ugrep",
+    "version": "7.8.5",
+    "license": "BSD-3-Clause",
+    "source": "f080ab6cd9d96a5357570cb60a99e09ebe5eef11cf322c35373dbe815378a1f2",
+    "formula": "ugrep",
+    "components": [
+      "brotli",
+      "lz4",
+      "pcre2",
+      "ugrep",
+      "xz",
+      "zstd"
+    ]
+  },
+  {
+    "id": "ugrep-indexer",
+    "command": "ugrep-indexer",
+    "version": "7.8.5",
+    "license": "BSD-3-Clause",
+    "source": "f080ab6cd9d96a5357570cb60a99e09ebe5eef11cf322c35373dbe815378a1f2",
+    "formula": "ugrep",
+    "components": [
+      "brotli",
+      "lz4",
+      "pcre2",
+      "ugrep",
+      "xz",
+      "zstd"
+    ]
+  },
+  {
+    "id": "uname",
+    "command": "uname",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "unexpand",
+    "command": "unexpand",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "uniq",
+    "command": "uniq",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "unix2dos",
+    "command": "unix2dos",
+    "version": "7.5.7",
+    "license": "BSD-2-Clause",
+    "source": "669ee27120ae71589f638fe3a167d6ea54f8633f5ab1b282551bd7a7c9510dfa",
+    "formula": "dos2unix",
+    "components": [
+      "dos2unix"
+    ]
+  },
+  {
+    "id": "unix2mac",
+    "command": "unix2mac",
+    "version": "7.5.7",
+    "license": "BSD-2-Clause",
+    "source": "669ee27120ae71589f638fe3a167d6ea54f8633f5ab1b282551bd7a7c9510dfa",
+    "formula": "dos2unix",
+    "components": [
+      "dos2unix"
+    ]
+  },
+  {
+    "id": "unlz4",
+    "command": "unlz4",
+    "version": "1.11.1",
+    "license": "BSD-2-Clause",
+    "source": "683fed08a844ad012196381e40badf80c0bbe4962959761416d41c9e67d77ec7",
+    "formula": "lz4",
+    "components": [
+      "lz4"
+    ]
+  },
+  {
+    "id": "unlzma",
+    "command": "unlzma",
+    "version": "5.8.4",
+    "license": "0BSD AND GPL-2.0-or-later",
+    "source": "0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9",
+    "formula": "xz",
+    "components": [
+      "xz"
+    ]
+  },
+  {
+    "id": "unpigz",
+    "command": "unpigz",
+    "version": "2.8",
+    "license": "Zlib",
+    "source": "eb872b4f0e1f0ebe59c9f7bd8c506c4204893ba6a8492de31df416f0d5170fd0",
+    "formula": "pigz",
+    "components": [
+      "pigz"
+    ]
+  },
+  {
+    "id": "unshield",
+    "command": "unshield",
+    "version": "1.6.2",
+    "license": "MIT",
+    "source": "a937ef596ad94d16e7ed2c8553ad7be305798dcdcfd65ae60210b1e54ab51a2f",
+    "formula": "unshield",
+    "components": [
+      "openssl@4",
+      "unshield"
+    ]
+  },
+  {
+    "id": "unxz",
+    "command": "unxz",
+    "version": "5.8.4",
+    "license": "0BSD AND GPL-2.0-or-later",
+    "source": "0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9",
+    "formula": "xz",
+    "components": [
+      "xz"
+    ]
+  },
+  {
+    "id": "unzip",
+    "command": "unzip",
+    "version": "6.0",
+    "license": "Info-ZIP",
+    "source": "036d96991646d0449ed0aa952e4fbe21b476ce994abc276e49d30e686708bd37",
+    "formula": "unzip",
+    "components": [
+      "unzip"
+    ]
+  },
+  {
+    "id": "unzstd",
+    "command": "unzstd",
+    "version": "1.5.7",
+    "license": "(BSD-3-Clause OR GPL-2.0-only) AND BSD-2-Clause AND MIT",
+    "source": "37d7284556b20954e56e1ca85b80226768902e2edabd3b649e9e72c0c9012ee3",
+    "formula": "zstd",
+    "components": [
+      "lz4",
+      "xz",
+      "zstd"
+    ]
+  },
+  {
+    "id": "uuidgen",
+    "command": "uuidgen",
+    "version": "2.42.4",
+    "license": "BSD-3-Clause AND BSD-4-Clause-UC AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-or-later AND LGPL-2.1-or-later AND LicenseRef-Homebrew-public-domain",
+    "source": "fbd62a100ab7bb8746ba0661255c3c48185b1e9021507c624da01fbc696330ec",
+    "formula": "util-linux",
+    "components": [
+      "gettext",
+      "util-linux"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-base64",
+    "command": "base64",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-basename",
+    "command": "basename",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-cat",
+    "command": "cat",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-chmod",
+    "command": "chmod",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-cksum",
+    "command": "cksum",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-comm",
+    "command": "comm",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-cp",
+    "command": "cp",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-cut",
+    "command": "cut",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-date",
+    "command": "date",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-df",
+    "command": "df",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-dirname",
+    "command": "dirname",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-du",
+    "command": "du",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-echo",
+    "command": "echo",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-env",
+    "command": "env",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "ca-certificates",
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-expand",
+    "command": "expand",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-expr",
+    "command": "expr",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-false",
+    "command": "false",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-fmt",
+    "command": "fmt",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-fold",
+    "command": "fold",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-head",
+    "command": "head",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-join",
+    "command": "join",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-ln",
+    "command": "ln",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-ls",
+    "command": "ls",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-mkdir",
+    "command": "mkdir",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-mktemp",
+    "command": "mktemp",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-mv",
+    "command": "mv",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-nl",
+    "command": "nl",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-od",
+    "command": "od",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-paste",
+    "command": "paste",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-printf",
+    "command": "printf",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-pwd",
+    "command": "pwd",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-readlink",
+    "command": "readlink",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-rm",
+    "command": "rm",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-rmdir",
+    "command": "rmdir",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-seq",
+    "command": "seq",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-sleep",
+    "command": "sleep",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-sort",
+    "command": "sort",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-split",
+    "command": "split",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-stat",
+    "command": "stat",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-tail",
+    "command": "tail",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-tee",
+    "command": "tee",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-touch",
+    "command": "touch",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-tr",
+    "command": "tr",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-true",
+    "command": "true",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-truncate",
+    "command": "truncate",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-uname",
+    "command": "uname",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-unexpand",
+    "command": "unexpand",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-uniq",
+    "command": "uniq",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-wc",
+    "command": "wc",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-coreutils-whoami",
+    "command": "whoami",
+    "version": "0.12.0",
+    "license": "MIT",
+    "source": "4fb327655cb4ffcbf2f16550cf9234079ffe839692f7aa1a6eda104af684e122",
+    "formula": "uutils-coreutils",
+    "components": [
+      "uutils-coreutils"
+    ]
+  },
+  {
+    "id": "uutils-diffutils-diffutils",
+    "command": "diffutils",
+    "version": "0.6.0",
+    "license": "Apache-2.0 OR MIT",
+    "source": "74f9c60ae86a63433bc82190e473b943057153d63f6ad39e646cc84350a3d9fa",
+    "formula": "uutils-diffutils",
+    "components": [
+      "uutils-diffutils"
+    ]
+  },
+  {
+    "id": "uutils-findutils-find",
+    "command": "find",
+    "version": "0.11.0",
+    "license": "MIT",
+    "source": "43d1fbb69a0e67e708435bd104966d1dd61357755452b733db9dabfd66cbf974",
+    "formula": "uutils-findutils",
+    "components": [
+      "ca-certificates",
+      "oniguruma",
+      "uutils-findutils"
+    ]
+  },
+  {
+    "id": "uutils-findutils-xargs",
+    "command": "xargs",
+    "version": "0.11.0",
+    "license": "MIT",
+    "source": "43d1fbb69a0e67e708435bd104966d1dd61357755452b733db9dabfd66cbf974",
+    "formula": "uutils-findutils",
+    "components": [
+      "ca-certificates",
+      "oniguruma",
+      "uutils-findutils"
+    ]
+  },
+  {
+    "id": "wc",
+    "command": "wc",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "webpinfo",
+    "command": "webpinfo",
+    "version": "1.6.0",
+    "license": "BSD-3-Clause",
+    "source": "e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564",
+    "formula": "webp",
+    "components": [
+      "webp"
+    ]
+  },
+  {
+    "id": "webpmux",
+    "command": "webpmux",
+    "version": "1.6.0",
+    "license": "BSD-3-Clause",
+    "source": "e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564",
+    "formula": "webp",
+    "components": [
+      "webp"
+    ]
+  },
+  {
+    "id": "wget",
+    "command": "wget",
+    "version": "1.25.0",
+    "license": "GPL-3.0-or-later",
+    "source": "766e48423e79359ea31e41db9e5c289675947a7fcf2efdcedb726ac9d0da3784",
+    "formula": "wget",
+    "components": [
+      "ca-certificates",
+      "gettext",
+      "libidn2",
+      "libpsl",
+      "libunistring",
+      "openssl@4",
+      "wget"
+    ]
+  },
+  {
+    "id": "which",
+    "command": "which",
+    "version": "2.25",
+    "license": "GPL-3.0-or-later",
+    "source": "1cb83e4f702e60b8211ab5ec4c2afbab1b1dec80209456a7d2faf7584ed225ea",
+    "formula": "gnu-which",
+    "components": [
+      "gnu-which"
+    ]
+  },
+  {
+    "id": "whirlpool-hash",
+    "command": "whirlpool-hash",
+    "version": "1.4.6",
+    "license": "0BSD",
+    "source": "9f6019cfeeae8ace7067ad22da4e4f857bb2cfa6c2deaa2258f55b2227ec937a",
+    "formula": "rhash",
+    "components": [
+      "rhash"
+    ]
+  },
+  {
+    "id": "whoami",
+    "command": "whoami",
+    "version": "9.12",
+    "license": "GPL-3.0-or-later",
+    "source": "a480198559733e9b3da999e90543ac6f888a2caa544d8d664c5a1f17e528e210",
+    "formula": "coreutils",
+    "components": [
+      "coreutils"
+    ]
+  },
+  {
+    "id": "whois",
+    "command": "whois",
+    "version": "5.6.6",
+    "license": "GPL-2.0-or-later",
+    "source": "43d3b3cc64c75e8bd10aee6feff3906e9488ed335076d206e70f3b25bf644969",
+    "formula": "whois",
+    "components": [
+      "ca-certificates",
+      "gettext",
+      "libidn2",
+      "libunistring",
+      "whois"
+    ]
+  },
+  {
+    "id": "xan",
+    "command": "xan",
+    "version": "0.61.0",
+    "license": "MIT OR Unlicense",
+    "source": "cd675a4ce734438f5b6b0eba28f5f1e275fdd58c387f03afc9eb37146779e18c",
+    "formula": "xan",
+    "components": [
+      "ca-certificates",
+      "xan"
+    ]
+  },
+  {
+    "id": "xargs",
+    "command": "xargs",
+    "version": "4.11.0",
+    "license": "GPL-3.0-or-later",
+    "source": "bfd19cb06cc71f3352d567e90284d8cdac02ac89774bbeadf0b533b0c11432fd",
+    "formula": "findutils",
+    "components": [
+      "ca-certificates",
+      "findutils"
+    ]
+  },
+  {
+    "id": "xh",
+    "command": "xh",
+    "version": "0.26.3",
+    "license": "MIT",
+    "source": "8c54c7e8e878600d1a322151e0158c4fa6e6793283a45e355d0c1f87ca6d5640",
+    "formula": "xh",
+    "components": [
+      "ca-certificates",
+      "xh"
+    ]
+  },
+  {
+    "id": "xhs",
+    "command": "xhs",
+    "version": "0.26.3",
+    "license": "MIT",
+    "source": "8c54c7e8e878600d1a322151e0158c4fa6e6793283a45e355d0c1f87ca6d5640",
+    "formula": "xh",
+    "components": [
+      "ca-certificates",
+      "xh"
+    ]
+  },
+  {
+    "id": "xmllint",
+    "command": "xmllint",
+    "version": "2.15.4",
+    "license": "MIT AND ISC-Veillard",
+    "source": "98087fd181d9070724f3fbc65c7377db03038eb92bd882374daff44940138821",
+    "formula": "libxml2",
+    "components": [
+      "ca-certificates",
+      "libxml2",
+      "readline"
+    ]
+  },
+  {
+    "id": "xmlstarlet",
+    "command": "xmlstarlet",
+    "version": "1.7.0",
+    "license": "MIT",
+    "source": "df4c93458fc6b2ad144d65dccf3ef251349871e0578c5bc59edbfeecf9bf3454",
+    "formula": "xmlstarlet",
+    "components": [
+      "ca-certificates",
+      "xmlstarlet"
+    ]
+  },
+  {
+    "id": "xsltproc",
+    "command": "xsltproc",
+    "version": "1.1.45",
+    "license": "X11",
+    "source": "9acfe68419c4d06a45c550321b3212762d92f41465062ca4ea19e632ee5d216e",
+    "formula": "libxslt",
+    "components": [
+      "ca-certificates",
+      "gettext",
+      "libgcrypt",
+      "libgpg-error",
+      "libxml2",
+      "libxslt"
+    ]
+  },
+  {
+    "id": "xxd",
+    "command": "xxd",
+    "version": "9.2.1355",
+    "license": "Vim",
+    "source": "4290f6ca08613564329d8e384ab2406d75ba5dca3971b824238967c4e0090665",
+    "formula": "vim",
+    "components": [
+      "vim"
+    ]
+  },
+  {
+    "id": "xxh128sum",
+    "command": "xxh128sum",
+    "version": "0.8.4",
+    "license": "BSD-2-Clause AND GPL-2.0-or-later",
+    "source": "5738270935e7c3d38a79b3adf7c9692566ce7895a25f67de43ad52ab504acd32",
+    "formula": "xxhash",
+    "components": [
+      "xxhash"
+    ]
+  },
+  {
+    "id": "xxh32sum",
+    "command": "xxh32sum",
+    "version": "0.8.4",
+    "license": "BSD-2-Clause AND GPL-2.0-or-later",
+    "source": "5738270935e7c3d38a79b3adf7c9692566ce7895a25f67de43ad52ab504acd32",
+    "formula": "xxhash",
+    "components": [
+      "xxhash"
+    ]
+  },
+  {
+    "id": "xxh3sum",
+    "command": "xxh3sum",
+    "version": "0.8.4",
+    "license": "BSD-2-Clause AND GPL-2.0-or-later",
+    "source": "5738270935e7c3d38a79b3adf7c9692566ce7895a25f67de43ad52ab504acd32",
+    "formula": "xxhash",
+    "components": [
+      "xxhash"
+    ]
+  },
+  {
+    "id": "xxh64sum",
+    "command": "xxh64sum",
+    "version": "0.8.4",
+    "license": "BSD-2-Clause AND GPL-2.0-or-later",
+    "source": "5738270935e7c3d38a79b3adf7c9692566ce7895a25f67de43ad52ab504acd32",
+    "formula": "xxhash",
+    "components": [
+      "xxhash"
+    ]
+  },
+  {
+    "id": "xxhsum",
+    "command": "xxhsum",
+    "version": "0.8.4",
+    "license": "BSD-2-Clause AND GPL-2.0-or-later",
+    "source": "5738270935e7c3d38a79b3adf7c9692566ce7895a25f67de43ad52ab504acd32",
+    "formula": "xxhash",
+    "components": [
+      "xxhash"
+    ]
+  },
+  {
+    "id": "xz",
+    "command": "xz",
+    "version": "5.8.4",
+    "license": "0BSD AND GPL-2.0-or-later",
+    "source": "0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9",
+    "formula": "xz",
+    "components": [
+      "xz"
+    ]
+  },
+  {
+    "id": "xzcat",
+    "command": "xzcat",
+    "version": "5.8.4",
+    "license": "0BSD AND GPL-2.0-or-later",
+    "source": "0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9",
+    "formula": "xz",
+    "components": [
+      "xz"
+    ]
+  },
+  {
+    "id": "xzdec",
+    "command": "xzdec",
+    "version": "5.8.4",
+    "license": "0BSD AND GPL-2.0-or-later",
+    "source": "0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9",
+    "formula": "xz",
+    "components": [
+      "xz"
+    ]
+  },
+  {
+    "id": "yq",
+    "command": "yq",
+    "version": "4.54.3",
+    "license": "MIT",
+    "source": "93143d49b2a3bd6cb723477f585366b29f70c636af4653191d61b49b0c47de7f",
+    "formula": "yq",
+    "components": [
+      "yq"
+    ]
+  },
+  {
+    "id": "zip",
+    "command": "zip",
+    "version": "3.0",
+    "license": "Info-ZIP",
+    "source": "f0e8bb1f9b7eb0b01285495a2699df3a4b766784c1765a8f1aeedf63c0806369",
+    "formula": "zip",
+    "components": [
+      "zip"
+    ]
+  },
+  {
+    "id": "zipinfo",
+    "command": "zipinfo",
+    "version": "6.0",
+    "license": "Info-ZIP",
+    "source": "036d96991646d0449ed0aa952e4fbe21b476ce994abc276e49d30e686708bd37",
+    "formula": "unzip",
+    "components": [
+      "unzip"
+    ]
+  },
+  {
+    "id": "zlib-flate",
+    "command": "zlib-flate",
+    "version": "12.4.2",
+    "license": "Apache-2.0",
+    "source": "8a58af5b6141319287c1883bec8bd1bd545b7567b7fc5e6ce5d25a1c85f36397",
+    "formula": "qpdf",
+    "components": [
+      "jpeg-turbo",
+      "openssl@4",
+      "qpdf"
+    ]
+  },
+  {
+    "id": "zsh",
+    "command": "zsh",
+    "version": "5.9.2",
+    "license": "MIT-Modern-Variant AND GPL-2.0-only AND GPL-2.0-or-later AND ISC",
+    "source": "36fa734374b44783582cec09bcd67822e2f992c779ec1624ab5596df078d2f81",
+    "build": {
+      "recipe": "zsh",
+      "dependencies": []
+    }
+  },
+  {
+    "id": "zstd",
+    "command": "zstd",
+    "version": "1.5.7",
+    "license": "(BSD-3-Clause OR GPL-2.0-only) AND BSD-2-Clause AND MIT",
+    "source": "37d7284556b20954e56e1ca85b80226768902e2edabd3b649e9e72c0c9012ee3",
+    "formula": "zstd",
+    "components": [
+      "lz4",
+      "xz",
+      "zstd"
+    ]
+  },
+  {
+    "id": "zstdcat",
+    "command": "zstdcat",
+    "version": "1.5.7",
+    "license": "(BSD-3-Clause OR GPL-2.0-only) AND BSD-2-Clause AND MIT",
+    "source": "37d7284556b20954e56e1ca85b80226768902e2edabd3b649e9e72c0c9012ee3",
+    "formula": "zstd",
+    "components": [
+      "lz4",
+      "xz",
+      "zstd"
+    ]
+  }
+]

@@ -1,0 +1,6 @@
+.DS_Store
+__pycache__/
+release-assets/
+.source-stage-*/
+!/distribution/build/
+/distribution/build/.build/

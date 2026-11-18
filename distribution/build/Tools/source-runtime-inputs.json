@@ -1,0 +1,81 @@
+{
+  "go": {
+    "go1.23.1": {
+      "sha256": "6ee44e298379d146a5e5aa6b1c5b5d5f5d0a3365eabdd70741e6e21340ec3b0d",
+      "url": "https://go.dev/dl/go1.23.1.src.tar.gz"
+    },
+    "go1.25.1": {
+      "sha256": "d010c109cee94d80efe681eab46bdea491ac906bf46583c32e9f0dbb0bd1a594",
+      "url": "https://go.dev/dl/go1.25.1.src.tar.gz"
+    },
+    "go1.26.10": {
+      "sha256": "fd63e883ba2f2bfca93c1646b31ebef63e2b1e4d2b317c9789d976a68d81f36f",
+      "url": "https://go.dev/dl/go1.26.10.src.tar.gz"
+    },
+    "go1.26.3": {
+      "sha256": "1c646875d0aa8799133184ed57cf79ff24bdefe8c8820470602a9d3d6d9192b8",
+      "url": "https://go.dev/dl/go1.26.3.src.tar.gz"
+    },
+    "go1.26.4": {
+      "sha256": "4f668a32fbfc1132e6a881fb968c2f1dada631492a339211735fbb255a42602d",
+      "url": "https://go.dev/dl/go1.26.4.src.tar.gz"
+    },
+    "go1.26.5": {
+      "sha256": "495be4bc87176ac567392e5b4116abd98466d33d7b49d41e764ccc6976b2dc42",
+      "url": "https://go.dev/dl/go1.26.5.src.tar.gz"
+    },
+    "go1.27.0": {
+      "sha256": "7002403d7cc44529ef6d26f69a44818263395ead7c16c05a5808ae047ebeb0e5",
+      "url": "https://go.dev/dl/go1.27.0.src.tar.gz"
+    },
+    "go1.27.1": {
+      "sha256": "4e408abae126d916b6164627193f2c54f0e3ca1312d693b86db45f862ab238b1",
+      "url": "https://go.dev/dl/go1.27.1.src.tar.gz"
+    },
+    "go1.27.3": {
+      "sha256": "6e7749035cf360f06b2575d162ea79df9fda8ef671889e5c375f8e50777f26bb",
+      "url": "https://go.dev/dl/go1.27.3.src.tar.gz"
+    },
+    "go1.27.4": {
+      "sha256": "73cfb8571aec0c01177687db87163d46aa20e9779672772891aa17654d9a6099",
+      "url": "https://go.dev/dl/go1.27.4.src.tar.gz"
+    }
+  },
+  "rust": {
+    "0ef1bc386059596dada8fb65b50425aab2ea637a": {
+      "sha256": "107afa7819b500c573b21a160b08f1a20bc2dfd99550717e1ffbbdb09da7ec6e",
+      "url": "https://static.rust-lang.org/dist/2026-11-12/rust-src-1.100.0.tar.xz",
+      "version": "1.100.0"
+    },
+    "31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd": {
+      "sha256": "b343b6553bc772225f6a2b5be5055017f29794dcf4e08020366b27a0a40fc1c2",
+      "url": "https://static.rust-lang.org/dist/2026-06-30/rust-src-1.96.1.tar.xz",
+      "version": "1.96.1"
+    },
+    "48a229ceaefd4985c50990b14116b6d856af0985": {
+      "sha256": "5c846ebcebcc7e2e0777a4cdaa12051691593f16a7e94edbae5e6241cc62d98c",
+      "url": "https://static.rust-lang.org/dist/2026-09-03/rust-src-1.98.1.tar.xz",
+      "version": "1.98.1"
+    },
+    "58cf8f9c35b355199727627d07ae34a4e2846d67": {
+      "sha256": "e485a88c45db546b73571df7bebfcb4454ba4fb552c492e25fc5b00eeb5bf22d",
+      "url": "https://static.rust-lang.org/dist/2026-10-15/rust-src-1.99.1.tar.xz",
+      "version": "1.99.1"
+    },
+    "88d9e12ae178fab0fb5cc050a94da85685d449ea": {
+      "sha256": "0e977492aed5ff137815bf9b4b796e8a85b80fb2367ed64e82d5c5839870f2bf",
+      "url": "https://static.rust-lang.org/dist/2026-08-20/rust-src-1.98.0.tar.xz",
+      "version": "1.98.0"
+    },
+    "8bab26f4f68e0e26f0bb7960be334d5b520ea452": {
+      "sha256": "e9a1e616d04c6845895c827a178b9227f7c7199f3f4a80af81ab3aff7b80156b",
+      "url": "https://static.rust-lang.org/dist/2026-07-16/rust-src-1.97.1.tar.xz",
+      "version": "1.97.1"
+    },
+    "b940084d7eb6a299eb4bfeb8e34901bc051e7ac4": {
+      "sha256": "3f1f9b7ed48f4596fc87889b7b3c61747336a55c9c22db1ab0c697e0aadb77aa",
+      "url": "https://static.rust-lang.org/dist/2026-10-01/rust-src-1.99.0.tar.xz",
+      "version": "1.99.0"
+    }
+  }
+}
